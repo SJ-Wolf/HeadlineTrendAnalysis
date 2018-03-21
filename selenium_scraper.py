@@ -112,7 +112,9 @@ def scrape(directory='results_html', query='microsoft', start_date=datetime.now(
 
 def download_results_html(query='bitcoin', start_date=date(year=2017, month=1, day=1),
                           date_offset=dateutil.relativedelta.relativedelta(months=1),
-                          last_page=10000):
+                          last_page=None):
+    if last_page is None:
+        last_page = 10000
     hard_start_date = False
     end_date = datetime.now().date()
     # end_date = date(year=1999, month=3, day=9)
@@ -133,7 +135,7 @@ def download_results_html(query='bitcoin', start_date=date(year=2017, month=1, d
             break
 
 
-def parse_results(query='bitcoin', ratio_to_keep=0.8, page_limit=None):
+def parse_results(query='bitcoin', ratio_to_keep=0.8, page_limit=None, min_words=5):
     if page_limit is None:
         page_limit = math.inf
     results = []
@@ -156,10 +158,14 @@ def parse_results(query='bitcoin', ratio_to_keep=0.8, page_limit=None):
     months = "|".join(months)
     print(months)
     date_re = re.compile(f'({months}) \\d+,? \\d+', re.RegexFlag.IGNORECASE)
-
+    number_re = re.compile(r'((?<=\s)|^).?\d+.?((?=\s)|$)')
     results_table = []
     for title, content in results:
-        title = title.replace('"', "").replace('\t', ' ').strip()
+        title = title.replace('"', "").replace('\t', ' ').replace(',', '').replace('.', '').lower()
+        title = number_re.sub('', title).strip()
+        num_words = len(re.findall('\w+', title))
+        if min_words is not None and num_words < min_words:
+            continue
         try:
             date = date_re.search(content).group()
         except AttributeError:
@@ -182,8 +188,8 @@ def parse_results(query='bitcoin', ratio_to_keep=0.8, page_limit=None):
 
 
 if __name__ == '__main__':
-    query = 'bitcoin'
-    # download_results_html(query, start_date=date(2018, month=1, day=1),
-    #                       date_offset=dateutil.relativedelta.relativedelta(years=1),
-    #                       last_page=30)
-    parse_results(query, 0.7, page_limit=20)
+    query = 'microsoft'
+    # download_results_html(query, start_date=date(2017, month=1, day=1),
+    #                       date_offset=dateutil.relativedelta.relativedelta(months=1),
+    #                       last_page=None)
+    parse_results(query, 0.7, page_limit=20, min_words=5)
