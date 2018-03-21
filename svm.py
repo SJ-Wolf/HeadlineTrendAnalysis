@@ -154,12 +154,6 @@ def grid_search(train_headlines, train_trend, test_headlines, test_trend, stop_w
     models = Parallel(n_jobs=8)(
         delayed(predict)(train_headlines, train_trend, test_headlines, test_trend, **params) for params in paramGrid)
 
-    # for params in paramGrid:
-    #     accuracy, df = predict(train_headlines, train_trend, test_headlines, test_trend, **params)
-    #     if max_accuracy is None or accuracy > max_accuracy:
-    #         max_accuracy = accuracy
-    #         max_df = df
-    #         max_params = params
     for params, accuracy in zip(paramGrid, models, ):
         if max_accuracy is None or accuracy > max_accuracy:
             max_accuracy = accuracy
@@ -178,28 +172,3 @@ if __name__ == '__main__':
     t0 = time.time()
     run()
     print(time.time() - t0)
-
-# from parfit.parfit import bestFit  # Necessary if you wish to use bestFit
-#
-# # Necessary if you wish to run each step sequentially
-# from parfit.fit import *
-# from parfit.score import *
-# from parfit.plot import *
-# from parfit.crossval import *
-#
-# grid = {
-#     'min_samples_leaf': [1, 5, 10, 25, 50, 100, 125, 150, 175, 200],
-#     'max_features': ['sqrt', 'log2', 0.4, 0.5, 0.6, 0.7],
-#     'class_weight': [None, 'balanced'],
-#     'n_estimators': [60],
-#     'n_jobs': [-1],
-#     'random_state': [42]
-# }
-# paramGrid = ParameterGrid(grid)
-#
-# best_model, best_score, all_models, all_scores = bestFit(RandomForestClassifier(), paramGrid,
-#                                                          X_train, y_train, X_val, y_val,
-#                                                          metric=roc_auc_score, greater_is_better=True,
-#                                                          scoreLabel='AUC')
-#
-# print(best_model)
