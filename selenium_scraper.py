@@ -1,3 +1,4 @@
+import sys
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 import time
@@ -65,8 +66,13 @@ def scrape(directory='results_html', query='microsoft', start_date=datetime.now(
     # input('Are you done navigating?')
     # driver.switch_to.frame('mainFrame')
     time.sleep(additional_wait_time)
-    classification_frame_name = driver.find_element_by_xpath(
-        '//frame[starts-with(@name, "fr_classification")]').get_attribute('name')
+    try:
+        classification_frame_name = driver.find_element_by_xpath(
+            '//frame[starts-with(@name, "fr_classification")]').get_attribute('name')
+    except NoSuchElementException as e:
+        raise Exception("Are you sure you are connected to a network with access to LexisNexis?").with_traceback(
+            sys.exc_info()[2])
+
     driver.switch_to.frame(classification_frame_name)
     driver.find_element_by_xpath(
         '//a[starts-with(@title, "Newspapers ")]').click()
