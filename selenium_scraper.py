@@ -13,6 +13,7 @@ import os
 from dateutil import parser
 import pandas as pd
 import numpy as np
+import math
 
 try:
     import urlparse
@@ -132,14 +133,16 @@ def download_results_html(query='bitcoin', start_date=date(year=2017, month=1, d
             break
 
 
-def parse_results(query='bitcoin'):
+def parse_results(query='bitcoin', ratio_to_keep=0.8, page_limit=None):
+    if page_limit is None:
+        page_limit = math.inf
     results = []
 
     for root, dirs, files in os.walk(os.path.join('output', query)):
         if len(files) == 0:
             continue
         page_numbers = np.array([int(x.replace('.html', '')) for x in files])
-        last_page = float(page_numbers.max() * 0.4)
+        last_page = min(float(page_numbers.max() * ratio_to_keep), page_limit)
         for file in files:
             if int(file.replace('.html', '')) > last_page:
                 continue
@@ -179,8 +182,8 @@ def parse_results(query='bitcoin'):
 
 
 if __name__ == '__main__':
-    query = 'nvidia'
-    download_results_html(query, start_date=date(2018, month=1, day=1),
-                          date_offset=dateutil.relativedelta.relativedelta(years=1),
-                          last_page=30)
-    parse_results(query)
+    query = 'bitcoin'
+    # download_results_html(query, start_date=date(2018, month=1, day=1),
+    #                       date_offset=dateutil.relativedelta.relativedelta(years=1),
+    #                       last_page=30)
+    parse_results(query, 0.7, page_limit=20)
