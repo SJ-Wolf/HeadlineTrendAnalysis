@@ -1,0 +1,806 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" style="height: 100%;"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Language" content="en_US" /> 
+<meta http-equiv="expires" content="Sat, 10 Mar 2018 07:41:36 GMT" />
+<title>LexisNexis® Academic: Results</title>
+<base href="http://www.lexisnexis.com:80/lnacui2api/" />
+
+
+
+<script type="text/javascript">djConfig = {parseWidgets: false};</script>
+
+
+
+<link rel="stylesheet" type="text/css" href="stylesheets/asn_search.css" />
+<link rel="stylesheet" href="stylesheets/Global.css" type="text/css" />
+<link rel="stylesheet" href="stylesheets/Styles.css" type="text/css" />
+<link rel="stylesheet" href="stylesheets/subModal.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/subModal.css" />
+
+
+
+
+
+
+
+<script type="text/javascript" src="js/mynexis/subModalcommon.js?v=1515443602000"></script>
+
+<script type="text/javascript" src="js/mynexis/subModal.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/dojo/dojo.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/dojoSubmit.js?v=1515443602000"></script>
+<script language="javascript" type="text/javascript">
+dojo.require("dojo.event.*");
+dojo.require("dojo.io.*");
+</script>
+
+<script type="text/javascript" src="js/results/resultsInclude.js?v=1515443602000"></script>
+<!-- Megha : focus by date : starts -->
+<script type="text/javascript" src="/lnacui2api/djs/results/resultsDateValidations_en_US_enAcademic.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/mynexis/mynValidation.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/mynexis/myNexis.js?v=1515443602000"></script>
+<script type="text/javascript" src="dwr/interface/MyNexisManagerAjaxService.js?v=1515443602000"></script>
+<script type="text/javascript" src="dwr/engine.js?v=1515443602000"></script>
+<script type="text/javascript" src="dwr/util.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/UXFramework20070309.js?v=1515443602000"></script>
+
+
+<script type="text/javascript" src="/lnacui2api/djs/results/results_en_US_enAcademic.js?v=1515443602000"></script>
+
+
+<script type="text/javascript" src="/lnacui2api/djs/results/results1_en_US_enAcademic.js?v=1515443602000"></script>
+<script type="text/javascript" src="/lnacui2api/djs/results/results2_en_US_enAcademic.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/common.js?v=1515443602000"></script>
+
+
+
+
+
+
+
+
+<style type="text/css">
+a:visited {
+color: #8f2b8c;
+}
+
+</style>
+<script language="javascript" type="text/javascript">
+function backToTopLink() {
+location.hash = 'top';
+}
+function hideDiv(viewMultilk) {
+if(viewMultilk==true)
+{
+document.getElementById("classOuterDiv").style.display='none';
+
+}
+}
+
+function hideLafnMessage() {
+document.getElementById("lafnContinueMsg").style.display='none';
+}
+
+
+// RAP Webstar fix 2461713 for Dec 2008 - Suman_Majumder: Start
+function reloadClassification(sortChange) {
+var tempVar = sortChange;
+if(tempVar == 'true') {
+setTimeout("changeClassificationOption()", 500);
+}
+}
+// RAP Webstar fix 2461713 for Dec 2008 - Suman_Majumder: End
+
+</script>
+
+
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css" /><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/translate_static/js/element/main.js"></script><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/element/TE_20170911_00/e/js/element/element_main.js"></script></head>
+
+<body bgcolor="#FFFFFF" style="margin: 0px; position: relative; min-height: 100%; top: 40px;" onload="hideDiv(true);initBoxes('listview');callSubScroll('frm_tagged_documents',0,1526);updateResultsNav();reloadClassification('false');scrollToHitPos('false');" onclick="storeScrollToHitPos('false');"><div class="skiptranslate" style=""><iframe id=":1.container" class="goog-te-banner-frame skiptranslate" frameborder="0" src="javascript:''" style="visibility:visible"></iframe></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="classOuterDiv" style="display: none; background-color: white; background: white; overflow: auto; z-index: 1; z-index: 10; margin-left: 0; margin-right: 0; margin-bottom: 0">
+</div>
+
+
+<div id="classInnerDiv" style="margin: 0px"><a name="top"></a>
+
+
+
+
+
+<a href="javascript:scrollToSkipLink('resultsListSkipNav');"><img src="images/s.gif" width="1" height="1" border="0" alt="Skip to end of result list" /></a><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td><form name="results_listview_ResultsListForm" method="post" action="/lnacui2api/results/listview/listview.do">
+<input type="hidden" name="risb" value="21_T27267823443" />
+<input type="hidden" name="formatType" value="LIST" />
+<input type="hidden" name="resultsRisbId" value="21_T27267823443" />
+<input type="hidden" name="sortId" value="RELEVANCE" />
+<input type="hidden" name="test" value="results/listview/listview.do" />
+<input type="hidden" name="fullPageURI" value="LIST" />
+<input type="hidden" name="contFrmReloaded" value="false" />
+<input type="hidden" name="cutomLink" value="/lnacui2api/results/shared/exitLinks.do?utilityLinkDispatch=results_docview_CustomSegRenderer&amp;pageOrigin=results_listview_Listview&amp;formStateKey=29_T27267823447" />
+<input type="hidden" name="reloadPage" />
+<input type="hidden" name="exitKey" value="29_T27267823447" />
+<input type="hidden" name="returnToKey" value="20_T27267830933" />
+<input type="hidden" id="startDocNumber" value="1526" />
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tbody><tr>
+<td align="center" class="l3"><b> 
+
+
+
+
+
+Selected Group:<img src="images/s.gif" width="7" height="1" alt="" />
+Newspapers
+
+ </b> <img src="images/s.gif" width="5" height="1" alt="" /> (<a class="rslink" href="" onclick="return viewAllResults()"> View All Results</a>) </td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+
+
+
+<table>
+<tbody><tr><td>
+<div>
+<span id="google_translate_element" style="padding-left: 9px;float:left;margin-bottom: 1px;"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage"><select class="goog-te-combo"><option value="">Select Language</option><option value="en">English</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="am">Amharic</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="az">Azerbaijani</option><option value="eu">Basque</option><option value="be">Belarusian</option><option value="bn">Bengali</option><option value="bs">Bosnian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="co">Corsican</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="fy">Frisian</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="ha">Hausa</option><option value="haw">Hawaiian</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kn">Kannada</option><option value="kk">Kazakh</option><option value="km">Khmer</option><option value="ko">Korean</option><option value="ku">Kurdish (Kurmanji)</option><option value="ky">Kyrgyz</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="lb">Luxembourgish</option><option value="mk">Macedonian</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="ne">Nepali</option><option value="no">Norwegian</option><option value="ps">Pashto</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="pa">Punjabi</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sm">Samoan</option><option value="gd">Scots Gaelic</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="sn">Shona</option><option value="sd">Sindhi</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="tg">Tajik</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="uz">Uzbek</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option><option value="xh">Xhosa</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="zu">Zulu</option></select></div>Powered by <span style="white-space:nowrap"><a class="goog-logo-link" href="https://translate.google.com" target="_blank"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Translate" />Translate</a></span></div></span>
+
+<span style="float:left; margin-top:5px;display: none;" id="showOrigBut">
+<img src="/lnacui2api/images/ButShowOriginalEnglish.gif?version=1515443602000" height="19" width="99" border="0" title="Show Original" alt="" onclick="javascript:showOriginal();" />
+</span>
+
+
+<span class="notranslate">
+<a class="whats-link" target="_self" onclick="javascript:openDisclaimerText('This is a hyperlink provided for your convenience. Translations which you request are provided by Google Translate. LexisNexis is not responsible for (and makes no warranty with respect to) the accuracy, adequacy, reliability or completeness of any translations and disclaims all liability, loss and damage of any nature arising in connection with translations. By use of this hyperlink to obtain a translation you confirm your agreement to the foregoing.');return false;" href="">Disclaimer</a>
+</span>
+
+</div>
+</td></tr></tbody></table>
+<script>
+var myVar;
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({
+pageLanguage: 'auto'
+}, 'google_translate_element');
+
+myVar=setInterval(function(){chkGoogle()},1000);
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+
+<doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><table width="100%" border="0" cellspacing="0" cellpadding="0" role="main">
+
+
+
+
+<tbody><tr class="nopadding">
+<td><a name="DOCNO_1"></a></td>
+</tr>
+<tr valign="baseline" height="8" class="toprow"><th width="6%" align="left" valign="center" nowrap="nowrap"><span><input type="checkbox" id="frm_control_box" title="Click here to select or de-select all" name="frm_control_box" value="checkbox" onclick="javascript:subSetAllSelectionStatus()" /></span></th><th width="94%" align="left" valign="center" nowrap="nowrap"><span>Results</span></th></tr><tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1970')" type="checkbox" value="1970" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1526" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1526">1526.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=382891&amp;docNo=1526" target="_parent">Govt plans up to 7-yr jail term for Ponzi push</a><br class="br" /><span class="notranslate">Times of India (Electronic Edition)</span>, February 21, 2018 Wednesday, TIMES BUSINESS, 378 words, Sidhartha@timesgroup.com</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_2"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1971')" type="checkbox" value="1971" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1527" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1527">1527.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=382891&amp;docNo=1527" target="_parent">Govt plans up to 7-yr jail term for Ponzi push</a><br class="br" /><span class="notranslate">Times of India (Electronic Edition)</span>, February 21, 2018 Wednesday, TIMES BUSINESS, 379 words, Sidhartha@timesgroup.com</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_3"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1972')" type="checkbox" value="1972" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1528" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1528">1528.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=382891&amp;docNo=1528" target="_parent">I don't get upset like humans</a><br class="br" /><span class="notranslate">Times of India (Electronic Edition)</span>, February 21, 2018 Wednesday, FRONT PAGE, 706 words, Swati.Bharadwaj@timesgroup.com</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_4"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1973')" type="checkbox" value="1973" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1529" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1529">1529.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=382891&amp;docNo=1529" target="_parent">Govt plans up to 7-yr jail term for Ponzi push</a><br class="br" /><span class="notranslate">Times of India (Electronic Edition)</span>, February 21, 2018 Wednesday, TIMES BUSINESS, 379 words, Sidhartha@timesgroup.com</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_5"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1974')" type="checkbox" value="1974" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1530" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1530">1530.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=382891&amp;docNo=1530" target="_parent">Govt plans up to 7-yr jail term for Ponzi push</a><br class="br" /><span class="notranslate">Times of India (Electronic Edition)</span>, February 21, 2018 Wednesday, TIMES BUSINESS, 378 words, Sidhartha@timesgroup.com</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_6"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1975')" type="checkbox" value="1975" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1531" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1531">1531.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=382891&amp;docNo=1531" target="_parent">Govt plans up to 7-yr jail term for Ponzi push</a><br class="br" /><span class="notranslate">Times of India (Electronic Edition)</span>, February 21, 2018 Wednesday, TIMES BUSINESS, 379 words, Sidhartha@timesgroup.com</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_7"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1976')" type="checkbox" value="1976" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1532" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1532">1532.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=382891&amp;docNo=1532" target="_parent">Stardom has not come easy for Harshita</a><br class="br" /><span class="notranslate">Times of India (Electronic Edition)</span>, February 24, 2018 Saturday, FRONT PAGE, 307 words, Sandeep.Rai@timesgroup.com</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_8"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1977')" type="checkbox" value="1977" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1533" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1533">1533.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=382891&amp;docNo=1533" target="_parent">'Started reading IT mag when I was 13'</a><br class="br" /><span class="notranslate">Times of India (Electronic Edition)</span>, February 24, 2018 Saturday, TIMES SPECIAL, 374 words, Sandeep.Rai@timesgroup.com</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_9"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1978')" type="checkbox" value="1978" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1534" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1534">1534.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=382891&amp;docNo=1534" target="_parent">Harshita: MIT stint was a big help</a><br class="br" /><span class="notranslate">Times of India (Electronic Edition)</span>, February 24, 2018 Saturday, FRONT PAGE, 288 words, Sandeep.Rai@timesgroup.com</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_10"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1979')" type="checkbox" value="1979" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1535" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1535">1535.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=382891&amp;docNo=1535" target="_parent">UP school dropout creates bestselling crypto app</a><br class="br" /><span class="notranslate">Times of India (Electronic Edition)</span>, February 24, 2018 Saturday, TIMES NATION, 263 words, Sandeep.Rai@timesgroup.com</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_11"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1980')" type="checkbox" value="1980" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1536" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1536">1536.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=382891&amp;docNo=1536" target="_parent">UP girl's paid crypto app is one of Apple's most popular</a><br class="br" /><span class="notranslate">Times of India (Electronic Edition)</span>, February 25, 2018 Sunday, THE OTHER UP, 509 words, Sandeep.Rai@timesgroup.com</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_12"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1981')" type="checkbox" value="1981" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1537" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1537">1537.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=382891&amp;docNo=1537" target="_parent">8 plaints of cryptocurrency fraud worth ?1 crore lodged</a><br class="br" /><span class="notranslate">Times of India (Electronic Edition)</span>, February 26, 2018 Monday, TIMES CITY, 422 words, Gitesh.Shelke@timesgroup.com</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_13"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1982')" type="checkbox" value="1982" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1538" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1538">1538.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=382891&amp;docNo=1538" target="_parent">DGP issues directives on digital evidence</a><br class="br" /><span class="notranslate">Times of India (Electronic Edition)</span>, March 7, 2018 Wednesday, TIMES CITY, 263 words, TIMES NEWS NETWORK</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_14"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1983')" type="checkbox" value="1983" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1539" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1539">1539.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=418973&amp;docNo=1539" target="_parent">'Time-traveller from 2030' PASSES lie detector test and claims revealing the future could put him in danger;  The time-traveller who goes by the name of "Noah" reveals what happens to Donald Trump and when machines take over.</a><br class="br" /><span class="notranslate">dailyrecord.co.uk</span>, February 13, 2018 Tuesday 5:11 PM GMT, NEWS,WEIRD NEWS; Version:1, 650 words, By Rachel Bishop</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_15"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1984')" type="checkbox" value="1984" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1540" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1540">1540.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=418973&amp;docNo=1540" target="_parent">'Time traveller' from 2030 reveals future US president and claims Trump's successor does 'something really bad';  Noah has made some startling claims about future US presidents and says the rules will be changed to allow a young woman to take over in 2030.</a><br class="br" /><span class="notranslate">dailyrecord.co.uk</span>, February 15, 2018 Thursday 1:22 PM GMT, NEWS,UK &amp; WORLD; Version:2, 657 words, By Kara O'Neill</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_16"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1985')" type="checkbox" value="1985" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1541" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1541">1541.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=418973&amp;docNo=1541" target="_parent">Brendan Rodgers warns Rangers that Celtic hitman Moussa Dembele is back to his best;  He hasn't quite hit the heights of last season but the Hoops boss reckons his star striker will relish this Sunday's derby.</a><br class="br" /><span class="notranslate">dailyrecord.co.uk</span>, March 7, 2018 Wednesday 6:00 AM GMT, SPORT,FOOTBALL,FOOTBALL NEWS; Version:2, 855 words, By Michael Gannon</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_17"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1986')" type="checkbox" value="1986" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1542" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1542">1542.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=8204&amp;docNo=1542" target="_parent">This Time, Mighty Amazon Is Underdog In Fight For Soccer Rights</a><br class="br" /><span class="notranslate">Investor's Business Daily</span>, February 9, 2018, TECHNOLOGY, 474 words, REINHARDT KRAUSE</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_18"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1987')" type="checkbox" value="1987" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1543" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1543">1543.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=8204&amp;docNo=1543" target="_parent">Nvidia, Top Tech Stocks Lead As S&amp;P Bounces Off Key Support Line</a><br class="br" /><span class="notranslate">Investor's Business Daily</span>, February 9, 2018, ETFS, 639 words, NANCY GONDO</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_19"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1988')" type="checkbox" value="1988" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1544" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1544">1544.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=8204&amp;docNo=1544" target="_parent">S&amp;P 500 Reverses After It Tests This Indicator; Will Apple Form A New Base?</a><br class="br" /><span class="notranslate">Investor's Business Daily</span>, February 9, 2018, STOCK MARKET TODAY, 1342 words, DAVID SAITO-CHUNG</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_20"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1989')" type="checkbox" value="1989" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1545" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1545">1545.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=8204&amp;docNo=1545" target="_parent">Why AT&amp;T, Verizon Not Acting As Safe Havens In This Market Sell-Off</a><br class="br" /><span class="notranslate">Investor's Business Daily</span>, February 9, 2018, TECHNOLOGY, 411 words, REINHARDT KRAUSE</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_21"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1990')" type="checkbox" value="1990" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1546" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1546">1546.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=8204&amp;docNo=1546" target="_parent">S&amp;P 500, Dow, Nasdaq Futures Rally After Stock Market Plunge</a><br class="br" /><span class="notranslate">Investor's Business Daily</span>, February 9, 2018, STOCK MARKET TODAY, 618 words, ED CARSON</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_22"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1991')" type="checkbox" value="1991" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1547" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1547">1547.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=8204&amp;docNo=1547" target="_parent">Biotechs, Brazil Among Past Month's Top-Performing Stock Plays</a><br class="br" /><span class="notranslate">Investor's Business Daily</span>, February 12, 2018, ETFS, 759 words, NANCY GONDO</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_23"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1992')" type="checkbox" value="1992" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1548" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1548">1548.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=8204&amp;docNo=1548" target="_parent">Is Your Portfolio Ready To Handle Increased Market Volatility?</a><br class="br" /><span class="notranslate">Investor's Business Daily</span>, February 12, 2018, ETFS, 853 words, NANCY GONDO</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_24"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1993')" type="checkbox" value="1993" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1549" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1549">1549.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=8204&amp;docNo=1549" target="_parent">Unilever Tells Digital Platforms To Clean Up Toxic Content Or Lose Ads</a><br class="br" /><span class="notranslate">Investor's Business Daily</span>, February 12, 2018, TECHNOLOGY, 274 words, REINHARDT KRAUSE</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_25"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('1994')" type="checkbox" value="1994" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents1550" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents1550">1550.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267823443&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=1526&amp;resultsUrlKey=29_T27267823447&amp;cisb=22_T27267823446&amp;treeMax=true&amp;treeWidth=0&amp;csi=8204&amp;docNo=1550" target="_parent">Under Armour Sales Strong; Stock Soars</a><br class="br" /><span class="notranslate">Investor's Business Daily</span>, February 13, 2018, NEWS, 434 words, ELAINE LOW</td></tr>
+
+</tbody></table>
+</form>
+
+
+</td>
+</tr>
+</tbody></table>
+
+
+
+
+<span style="width:100%;clear:both;"><a id="resultsListSkipNav" name="resultsListSkipNav"></a></span>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td align="center" class="tenpix paddingtop" style="border-top: 1px solid #ccc;">
+
+
+
+
+
+
+<table width="100%" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td width="10" rowspan="4" align="center"><img src="images/s.gif" width="10" height="10" alt="" /></td>
+<td colspan="2" align="center"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+<td width="7" rowspan="4" align="center"><img src="images/s.gif" width="10" height="7" alt="" /></td>
+</tr>
+<tr>
+<td>
+<table id="searchDetails" role="complementary" width="100%" border="0" cellspacing="0" cellpadding="0">
+
+
+
+
+<tbody><tr>
+<td align="right" nowrap="nowrap" class="l3e" width="auto" style="font-weight: normal;font-size:8pt;;color: #666666;">Search Terms</td>
+<td width="10"><img src="images/s.gif" width="7" height="7" alt="" /></td>
+<td class="l3">[((bitcoin) and Date(geq(2/9/2018) and leq(3/8/2018)))]
+
+
+
+(1756)
+
+
+
+
+
+
+
+
+
+<img src="images/s.gif" width="3" height="" alt="" />
+<a class="link1" href="javascript:viewSrchDtlsOpenPopUp();">
+View search details</a>
+<div id="genericErrorDiv" style="display: none;z-index: 2">
+<div id="genericErrorDivContent" style="font-family: Open Sans, Verdana,Arial,Helvetica,sans-serif;font-size: 8pt;">
+<h3 style="color:#903; font-family: Open Sans, Verdana,Arial,Helvetica,sans-serif;font-size: 8pt;">
+<strong>Search Details</strong></h3>
+
+
+<!--  <p id="errString" style="color:#666666;font-family:Verdana,Arial,Helvetica,sans-serif;font-size:8pt;">
+You searched for:
+((bitcoin) and Date(geq(2/9/2018) and leq(3/8/2018)))</p> -->
+
+
+
+<p id="errString" style="color:#666666;font-family: Open Sans,Verdana,Arial,Helvetica,sans-serif;font-size:8pt;">
+You searched for:
+((bitcoin) and Date(geq(2/9/2018) and leq(3/8/2018)))
+</p>
+
+
+
+
+
+<div class="errBtn">
+<a class="link1" href="javascript:viewSrchDtlsHidePopUp();">
+<img src="/lnacui2api/images/ButClose.gif?version=1515443602000" height="19" width="45" border="0" title="Close" alt="" />
+</a>
+</div>
+</div>
+</div>
+
+
+
+
+</td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+
+
+
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Source</td>
+<td><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3" valign="middle"><img src="/lnacui2api/images/IconInfo.gif?version=1515443602000" height="14" width="14" align="absmiddle" style="border:0;cursor:pointer;" title="Source Information" alt="Source Information" onclick="return openSourceInfoWindow('/lnacui2api/results/shared/sourceInfo.do?sourceName=Newspaper+Stories%2C+Combined+Papers&amp;sourceId=S_AC00NBGenSrch.0_8411')" /><img src="images/s.gif" width="4" height="7" alt="" />[Newspaper Stories, Combined Papers]</td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Show</td>
+<td><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3">List</td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Sort</td>
+<td><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3">Relevance</td>
+<td><img src="images/s.gif" width="7" height="7" alt="" /></td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Date/Time</td>
+<td width="10"><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3">March 10 2018 02:31:36</td>
+
+
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap" class="l3"><img src="images/s.gif" width="5" height="10" alt="" /></td>
+</tr>
+
+
+
+
+
+
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr>
+<td align="left" width="23%"></td>
+<td align="center">
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td>
+
+<table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" valign="middle"></td><td align="right"><a href="javascript:pagination('/lnacui2api/results/listview/listview.do?start=1');"><img src="images/IconPaginationFirst.gif" border="0" alt="View first document set" "="" title="View first document set" /></a><img src="images/s.gif" alt="" height="0" width="4" border="0" /><a href="javascript:pagination('/lnacui2api/results/listview/listview.do?start=1501');"><img src="images/IconPaginationPrevious.gif" border="0" alt="View previous document set" "="" title="View previous document set" /></a></td><td align="right" valign="middle" class="l3"><img src="images/s.gif" alt="" width="3" height="16" border="0" /></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1276');">52</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1301');">53</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1326');">54</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1351');">55</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1376');">56</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1401');">57</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1426');">58</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1451');">59</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1476');">60</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1501');">61</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap=""> <span class="l3j">62</span></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1551');">63</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1576');">64</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1601');">65</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1626');">66</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1651');">67</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1676');">68</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1701');">69</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1726');">70</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1751');">71</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="7" height="16" border="0" /></td><td align="right"><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1551');"><img src="images/IconPaginationNext.gif" border="0" alt="View next document set" "="" title="View next document set" /></a><img src="images/s.gif" alt="" height="0" width="4" border="0" /><a href="javascript:rand=1520667096883;pagination('/lnacui2api/results/listview/listview.do?start=1751');"><img src="images/IconPaginationLast.gif" border="0" alt="View last document set" "="" title="View last document set" /></a></td></tr></tbody></table>
+
+
+</td>
+</tr>
+</tbody></table>
+
+</td>
+
+
+
+
+<td class="l3" align="right" nowrap="nowrap">
+<a class="link1" href="javascript:backToTopLink();">
+Back to Top</a>
+</td>
+
+
+
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td align="center"><img src="images/s.gif" width="10" height="10" alt="" /></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+<script>
+var viewSrchDetails_Overlay_Suptd = 'false';
+</script>
+
+</td>
+</tr>
+</tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript">
+function setParentAsTarget(hrefLink, framesetName) {
+try {
+if(parent.document.getElementById(framesetName)!= null) {
+hrefLink.target='_parent';
+}
+} catch (e) {
+}
+}
+
+function openTerms(anchor) {
+features = createWindowFeatures(800, 400, 9, 0, 0, 0, 1, 1);
+
+if (window.help &amp;&amp; !window.help.closed) {
+help.focus();
+}
+help=window.open(anchor.href, anchor.target, features);
+return false;
+}
+
+function openWindow(page, w, h){
+var popupWin = window.open(page, "popup", "width=" + w + ",height=" + h);
+return popupWin;
+}
+
+function openCopyright(anchor) {
+features = createWindowFeatures(620, 400, 5, 0, 0, 0, 1, 1);
+
+if (window.help &amp;&amp; !window.help.closed) {
+help.focus();
+}
+help=window.open(anchor.href, anchor.target, features);
+return false;
+}
+
+function openExternalLink(url){
+// Left aligned popup window
+var str_target = "_external";
+var int_winWidth  = 625;
+var int_winHeight = 460;
+var str_attribute = "top=0,left=0,toolbar=yes,scrollbars=yes,location=yes,resizable=yes,menubar=yes,width="+int_winWidth+",height="+int_winHeight;
+// Calls the popup window function
+var winVar = window.open(url,str_target,str_attribute);
+winVar.focus();
+}
+</script>
+<style>
+.cvdFooter {
+color: #333;
+font-size:7pt;
+border-top: 1px solid #CCC;
+margin-top:40px;
+}
+
+.logo {
+padding:10px;
+border-right:1px dotted #ccc;
+font-family:Open Sans,Verdana, Arial, Helvetica, sans-serif;
+}
+
+.footerPadding {
+padding:9px 10px 10px 10px;
+}
+
+.footerLink a:link, .footerLink a:visited, .footerLink a:active{
+font-size:7pt;
+color:#004b91 ;
+font-family:Open Sans,verdana;
+text-decoration: none;
+font-weight: normal;
+}
+
+.footerLink a:hover{
+text-decoration: underline;
+}
+
+.l3d{
+FONT-SIZE: 8pt;
+COLOR: #cccccc;
+}
+
+.copyright{
+font-size:7pt;
+color:#333 ;
+}
+
+
+.cvdFooter span, .cvdFooter label, .cvdFooter td, .cvdFooter th{
+font-family:Open Sans,verdana,arial,helvetica,sans-serif;
+}
+
+
+</style>
+
+
+
+<div id="cvdFooterDiv" class="cvdFooter" align="left">
+<table cellpadding="0" cellspacing="0" border="0" align="left" width="100%">
+
+<tbody><tr>
+
+
+
+
+
+<td align="left" valign="middle" width="130" class="logo">
+
+
+
+
+
+
+
+
+
+
+<img src="/lnacui2api/images/LexisNexisFooter.png?version=1515443602000" height="21" width="109" border="0" title="LexisNexis®" alt="LexisNexis®" />
+
+</td>
+
+
+
+
+<td align="left" class="footerPadding">
+<table cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0" border="0">
+<tbody><tr>
+<td class="footerLink"><a class="footerLink" href="http://www.lexisnexis.com/about/" onclick="return openTerms(this)">
+
+
+
+
+
+
+
+
+
+About LexisNexis®
+
+</a></td>
+
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+<td><span class="l3d">|</span></td>
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+<td class="footerLink"><a class="footerLink" href="auth/displayterms.do?content=GENERAL" onclick="return openTerms(this)">
+
+
+
+
+
+
+
+
+
+Terms &amp; Conditions
+
+</a></td>
+
+
+
+
+
+
+
+
+
+
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+<td><span class="l3d">|</span></td>
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+
+<td class="footerLink"><a class="footerLink" href="auth/myid.do" onclick="openWindow('/lnacui2api/auth/myid.do',290,140);return false;" target="_self">My ID</a></td>
+
+
+
+
+
+
+
+
+
+
+
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td align="left"><img src="images/s.gif" width="1" height="5" alt="" /></td>
+</tr>
+<tr>
+<td align="left"><span class="footerLink"><a class="footerLink" href="http://www.lexisnexis.com/terms/copyright.asp" onclick="return openCopyright(this)">Copyright ©</a></span>
+<span class="copyright">
+<script type="text/javascript">document.write(new Date().getFullYear());</script>2018</span><img height="1" src="images/s.gif" width="2" border="0" alt="" />
+<!-- Webstar 3559663 - Update Marketing Pop-up header and footer : Starts -->
+
+
+
+<span class="footerLink"><a class="footerLink" href="javascript:openExternalLink('http://www.lexisnexis.com')">
+
+
+
+
+
+
+
+
+
+
+LexisNexis®.
+
+ 
+</a></span>
+<span class="copyright">All rights reserved.</span>
+
+
+<!-- Webstar 3559663 - Update Marketing Pop-up header and footer : Ends -->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+
+
+<td width:="" style="width: 150px" ;="">
+<a href="http://www.relx.com" target="_blank" class="relx-logo"><img src="/lnacui2api/images/re-logo.png?version=1515443602000" height="20" width="123" border="0" title="RELX Group" alt="RELX Group" /></a>
+</td>
+
+
+</tr>
+</tbody></table>
+
+</div>
+
+
+
+
+
+
+</td>
+</tr>
+</tbody></table>
+
+
+ 
+</div><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google Translate" /></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;" /><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+
+
+
+
+
+
+
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"/></svg></div></div><iframe frameborder="0" class="goog-te-menu-frame skiptranslate" title="Language Translate Widget" style="visibility: visible; box-sizing: content-box; width: 977px; height: 263px; display: none;"></iframe><iframe frameborder="0" class="goog-te-menu-frame skiptranslate" title="Language Translate Widget" style="visibility: visible; box-sizing: content-box; width: 197px; height: 69px; display: none;"></iframe><div id="popupMask"></div><div id="popupContainer"><div id="popupInner"><div id="popupTitleBar"><div id="popupTitle"></div><div id="popupControls"></div></div></div></div></body></html>

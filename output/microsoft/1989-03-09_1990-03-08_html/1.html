@@ -1,0 +1,806 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" style="height: 100%;"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Language" content="en_US" /> 
+<meta http-equiv="expires" content="Sat, 10 Mar 2018 01:19:35 GMT" />
+<title>LexisNexis® Academic: Results</title>
+<base href="http://www.lexisnexis.com:80/lnacui2api/" />
+
+
+
+<script type="text/javascript">djConfig = {parseWidgets: false};</script>
+
+
+
+<link rel="stylesheet" type="text/css" href="stylesheets/asn_search.css" />
+<link rel="stylesheet" href="stylesheets/Global.css" type="text/css" />
+<link rel="stylesheet" href="stylesheets/Styles.css" type="text/css" />
+<link rel="stylesheet" href="stylesheets/subModal.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/subModal.css" />
+
+
+
+
+
+
+
+<script type="text/javascript" src="js/mynexis/subModalcommon.js?v=1515443602000"></script>
+
+<script type="text/javascript" src="js/mynexis/subModal.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/dojo/dojo.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/dojoSubmit.js?v=1515443602000"></script>
+<script language="javascript" type="text/javascript">
+dojo.require("dojo.event.*");
+dojo.require("dojo.io.*");
+</script>
+
+<script type="text/javascript" src="js/results/resultsInclude.js?v=1515443602000"></script>
+<!-- Megha : focus by date : starts -->
+<script type="text/javascript" src="/lnacui2api/djs/results/resultsDateValidations_en_US_enAcademic.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/mynexis/mynValidation.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/mynexis/myNexis.js?v=1515443602000"></script>
+<script type="text/javascript" src="dwr/interface/MyNexisManagerAjaxService.js?v=1515443602000"></script>
+<script type="text/javascript" src="dwr/engine.js?v=1515443602000"></script>
+<script type="text/javascript" src="dwr/util.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/UXFramework20070309.js?v=1515443602000"></script>
+
+
+<script type="text/javascript" src="/lnacui2api/djs/results/results_en_US_enAcademic.js?v=1515443602000"></script>
+
+
+<script type="text/javascript" src="/lnacui2api/djs/results/results1_en_US_enAcademic.js?v=1515443602000"></script>
+<script type="text/javascript" src="/lnacui2api/djs/results/results2_en_US_enAcademic.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/common.js?v=1515443602000"></script>
+
+
+
+
+
+
+
+
+<style type="text/css">
+a:visited {
+color: #8f2b8c;
+}
+
+</style>
+<script language="javascript" type="text/javascript">
+function backToTopLink() {
+location.hash = 'top';
+}
+function hideDiv(viewMultilk) {
+if(viewMultilk==true)
+{
+document.getElementById("classOuterDiv").style.display='none';
+
+}
+}
+
+function hideLafnMessage() {
+document.getElementById("lafnContinueMsg").style.display='none';
+}
+
+
+// RAP Webstar fix 2461713 for Dec 2008 - Suman_Majumder: Start
+function reloadClassification(sortChange) {
+var tempVar = sortChange;
+if(tempVar == 'true') {
+setTimeout("changeClassificationOption()", 500);
+}
+}
+// RAP Webstar fix 2461713 for Dec 2008 - Suman_Majumder: End
+
+</script>
+
+
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css" /><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/translate_static/js/element/main.js"></script><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/element/TE_20170911_00/e/js/element/element_main.js"></script></head>
+
+<body bgcolor="#FFFFFF" style="margin: 0px; position: relative; min-height: 100%; top: 40px;" onload="hideDiv(true);initBoxes('listview');callSubScroll('frm_tagged_documents',0,26);updateResultsNav();reloadClassification('false');scrollToHitPos('false');" onclick="storeScrollToHitPos('false');"><div class="skiptranslate" style=""><iframe id=":1.container" class="goog-te-banner-frame skiptranslate" frameborder="0" src="javascript:''" style="visibility:visible"></iframe></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="classOuterDiv" style="display: none; background-color: white; background: white; overflow: auto; z-index: 1; z-index: 10; margin-left: 0; margin-right: 0; margin-bottom: 0">
+</div>
+
+
+<div id="classInnerDiv" style="margin: 0px"><a name="top"></a>
+
+
+
+
+
+<a href="javascript:scrollToSkipLink('resultsListSkipNav');"><img src="images/s.gif" width="1" height="1" border="0" alt="Skip to end of result list" /></a><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td><form name="results_listview_ResultsListForm" method="post" action="/lnacui2api/results/listview/listview.do">
+<input type="hidden" name="risb" value="21_T27267537069" />
+<input type="hidden" name="formatType" value="LIST" />
+<input type="hidden" name="resultsRisbId" value="21_T27267537069" />
+<input type="hidden" name="sortId" value="RELEVANCE" />
+<input type="hidden" name="test" value="results/listview/listview.do" />
+<input type="hidden" name="fullPageURI" value="LIST" />
+<input type="hidden" name="contFrmReloaded" value="false" />
+<input type="hidden" name="cutomLink" value="/lnacui2api/results/shared/exitLinks.do?utilityLinkDispatch=results_docview_CustomSegRenderer&amp;pageOrigin=results_listview_Listview&amp;formStateKey=29_T27267537073" />
+<input type="hidden" name="reloadPage" />
+<input type="hidden" name="exitKey" value="29_T27267537073" />
+<input type="hidden" name="returnToKey" value="20_T27267537082" />
+<input type="hidden" id="startDocNumber" value="26" />
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tbody><tr>
+<td align="center" class="l3"><b> 
+
+
+
+
+
+Selected Group:<img src="images/s.gif" width="7" height="1" alt="" />
+Newspapers
+
+ </b> <img src="images/s.gif" width="5" height="1" alt="" /> (<a class="rslink" href="" onclick="return viewAllResults()"> View All Results</a>) </td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+
+
+
+<table>
+<tbody><tr><td>
+<div>
+<span id="google_translate_element" style="padding-left: 9px;float:left;margin-bottom: 1px;"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage"><select class="goog-te-combo"><option value="">Select Language</option><option value="en">English</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="am">Amharic</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="az">Azerbaijani</option><option value="eu">Basque</option><option value="be">Belarusian</option><option value="bn">Bengali</option><option value="bs">Bosnian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="co">Corsican</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="fy">Frisian</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="ha">Hausa</option><option value="haw">Hawaiian</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kn">Kannada</option><option value="kk">Kazakh</option><option value="km">Khmer</option><option value="ko">Korean</option><option value="ku">Kurdish (Kurmanji)</option><option value="ky">Kyrgyz</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="lb">Luxembourgish</option><option value="mk">Macedonian</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="ne">Nepali</option><option value="no">Norwegian</option><option value="ps">Pashto</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="pa">Punjabi</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sm">Samoan</option><option value="gd">Scots Gaelic</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="sn">Shona</option><option value="sd">Sindhi</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="tg">Tajik</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="uz">Uzbek</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option><option value="xh">Xhosa</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="zu">Zulu</option></select></div>Powered by <span style="white-space:nowrap"><a class="goog-logo-link" href="https://translate.google.com" target="_blank"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Translate" />Translate</a></span></div></span>
+
+<span style="float:left; margin-top:5px;display: none;" id="showOrigBut">
+<img src="/lnacui2api/images/ButShowOriginalEnglish.gif?version=1515443602000" height="19" width="99" border="0" title="Show Original" alt="" onclick="javascript:showOriginal();" />
+</span>
+
+
+<span class="notranslate">
+<a class="whats-link" target="_self" onclick="javascript:openDisclaimerText('This is a hyperlink provided for your convenience. Translations which you request are provided by Google Translate. LexisNexis is not responsible for (and makes no warranty with respect to) the accuracy, adequacy, reliability or completeness of any translations and disclaims all liability, loss and damage of any nature arising in connection with translations. By use of this hyperlink to obtain a translation you confirm your agreement to the foregoing.');return false;" href="">Disclaimer</a>
+</span>
+
+</div>
+</td></tr></tbody></table>
+<script>
+var myVar;
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({
+pageLanguage: 'auto'
+}, 'google_translate_element');
+
+myVar=setInterval(function(){chkGoogle()},1000);
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+
+<doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><table width="100%" border="0" cellspacing="0" cellpadding="0" role="main">
+
+
+
+
+<tbody><tr class="nopadding">
+<td><a name="DOCNO_1"></a></td>
+</tr>
+<tr valign="baseline" height="8" class="toprow"><th width="6%" align="left" valign="center" nowrap="nowrap"><span><input type="checkbox" id="frm_control_box" title="Click here to select or de-select all" name="frm_control_box" value="checkbox" onclick="javascript:subSetAllSelectionStatus()" /></span></th><th width="94%" align="left" valign="center" nowrap="nowrap"><span>Results</span></th></tr><tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('187')" type="checkbox" value="187" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents26" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents26">26.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=10939&amp;docNo=26" target="_parent">(CORRECTED) Headland buys rival for 11m pounds; Microsoft</a><br class="br" /><span class="notranslate">The Times (London)</span>, October 3 1989, Tuesday Correction Appended, Issue 63515., 440 words, JEREMY ANDREWS</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_2"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('188')" type="checkbox" value="188" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents27" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents27">27.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=10939&amp;docNo=27" target="_parent">(CORRECTED) Headland buys rival for 11m pounds; Microsoft</a><br class="br" /><span class="notranslate">The Times (London)</span>, October 3 1989, Tuesday Correction Appended, Issue 63515., 440 words, JEREMY ANDREWS</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_3"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('189')" type="checkbox" value="189" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents28" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents28">28.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=8286&amp;docNo=28" target="_parent">Word processor gets a pretty new dress for success</a><br class="br" /><span class="notranslate">The Toronto Star</span>, November 1, 1989, Wednesday, FINAL EDITION, BUSINESS TODAY; Pg. C8, 913 words, By George Brett Toronto Star</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_4"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('190')" type="checkbox" value="190" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents29" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents29">29.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=11810&amp;docNo=29" target="_parent">'MICROSOFT WORKS' WELL-NAMED</a><br class="br" /><span class="notranslate">St. Louis Post-Dispatch (Missouri)</span>, December 25, 1989, MONDAY, FIVE STAR Edition, BUSINESS PLUS; Pg. 8, 1880 words, RICHARD O'REILLY COMPUTER FILE COLUMN</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_5"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('191')" type="checkbox" value="191" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents30" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents30">30.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=8075&amp;docNo=30" target="_parent">Computer Moguls' Gathering Resembles Potshot Video Game</a><br class="br" /><span class="notranslate">The Washington Post</span>, September 27, 1989, Wednesday, Final Edition, FINANCIAL; PAGE B1, 747 words, Evelyn Richards, Washington Post Staff Writer</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_6"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('231')" type="checkbox" value="231" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents31" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents31">31.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=390780&amp;docNo=31" target="_parent">ADVANCED SOFTWARE TRAINING OFFERED</a><br class="br" /><span class="notranslate">Australian Financial Review</span>, July 3, 1989 Monday, INFORMATION TECHNOLOGY; Pg. 45, 206 words, Beverley Head</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_7"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('232')" type="checkbox" value="232" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents32" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents32">32.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=314237&amp;docNo=32" target="_parent">MINI FLOPPY DISCS;  QUICK BITES</a><br class="br" /><span class="notranslate">The Sun Herald (Sydney, Australia)</span>, May 28, 1989 Sunday, NEWS AND FEATURES; Pg. 51, 541 words, David Frith</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_8"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('233')" type="checkbox" value="233" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents33" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents33">33.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=314237&amp;docNo=33" target="_parent">UNBLOODIED AMSTRAD STILL PUSHING PRICES DOWN</a><br class="br" /><span class="notranslate">Sydney Morning Herald (Australia)</span>, May 29, 1989 Monday, COMPUTERS; Pg. 17, 280 words, GRAEME PHILIPSON</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_9"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('234')" type="checkbox" value="234" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents34" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents34">34.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=314237&amp;docNo=34" target="_parent">LAWSUIT SHAKES APPLE TO THE CORE</a><br class="br" /><span class="notranslate">The Sun Herald (Sydney, Australia)</span>, December 24, 1989 Sunday, COMPUTERS; Pg. 32, 654 words, DAVID FRITH</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_10"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('235')" type="checkbox" value="235" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents35" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents35">35.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=138620&amp;docNo=35" target="_parent">Computer Guardian: The font wars - This week IBM announced it is backing Adobe's font technology for its Systems Application Architecture, while MicroSoft and Apple which made Adobe famous have decided to use their own system, TrueType Peter Jackson reports on the battle / Workspace</a><br class="br" /><span class="notranslate">The Guardian (London)</span>, March 8, 1990, 1009 words</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_11"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('236')" type="checkbox" value="236" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents36" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents36">36.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=8213&amp;docNo=36" target="_parent">Microsoft exec's $ 46.2M bargain hunt</a><br class="br" /><span class="notranslate">USA TODAY</span>, April 17, 1989, Monday, FINAL EDITION, MONEY; Pg. 7B, 461 words, Bob Gabele, Invest/Net; Jay McCormick</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_12"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('237')" type="checkbox" value="237" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents37" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents37">37.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=6742&amp;docNo=37" target="_parent">The Executive Computer; Bringing Microsoft's 'Windows' to Critical Mass</a><br class="br" /><span class="notranslate">The New York Times</span>, January 28, 1990, Sunday, Late Edition - Final, Section 3; Page 27, Column 1; Financial Desk, 1150 words, By Peter H. Lewis</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_13"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('238')" type="checkbox" value="238" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents38" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents38">38.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=6742&amp;docNo=38" target="_parent">Microsoft Net Up 10.2%; Ashton-Tate Gains</a><br class="br" /><span class="notranslate">The New York Times</span>, April 20, 1989, Thursday, Late City Final Edition, Section D; Page 14, Column 4; Financial Desk, 283 words, By The Associated Press</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_14"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('239')" type="checkbox" value="239" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents39" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents39">39.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=8075&amp;docNo=39" target="_parent">Microsoft Works to Bring High-End Functions to Low-End PC Users</a><br class="br" /><span class="notranslate">The Washington Post</span>, November 13, 1989, Monday, Final Edition, FINANCIAL; PAGE F28; PERSONAL COMPUTING, 779 words, Brit Hume</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_15"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('284')" type="checkbox" value="284" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents40" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents40">40.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=8002&amp;docNo=40" target="_parent">Firms develop software interface for OS/2</a><br class="br" /><span class="notranslate">The Japan Economic Journal</span>, September 2, 1989, FROM NIKKEI NEWSPAPERS; Industries; Pg. 19, 840 words, By Takehiko Koyanagi, JAPAN ECONOMIC JOURNAL STAFF WRITER</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_16"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('296')" type="checkbox" value="296" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents41" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents41">41.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=390780&amp;docNo=41" target="_parent">APPLE SET TO LOSE SUIT</a><br class="br" /><span class="notranslate">Australian Financial Review</span>, July 24, 1989 Monday, BUSINESS; Pg. 32, 207 words, Source: AP-Dow Jones</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_17"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('297')" type="checkbox" value="297" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents42" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents42">42.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=390780&amp;docNo=42" target="_parent">MICROSOFT OPENS UP MORE WINDOWS</a><br class="br" /><span class="notranslate">Australian Financial Review</span>, November 13, 1989 Monday, INFORMATION TECHNOLOGY; Pg. 56, 327 words, HELENE ZAMPETAKIS</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_18"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('298')" type="checkbox" value="298" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents43" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents43">43.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=314237&amp;docNo=43" target="_parent">LAST BITS</a><br class="br" /><span class="notranslate">Sydney Morning Herald (Australia)</span>, July 10, 1989 Monday, COMPUTERS; Pg. 21, 382 words, GRAEME PHILIPSON</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_19"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('299')" type="checkbox" value="299" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents44" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents44">44.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=314237&amp;docNo=44" target="_parent">RECYCLED PAPER HITS THE SCENE;  MORE BITS</a><br class="br" /><span class="notranslate">Sydney Morning Herald (Australia)</span>, September 4, 1989 Monday, COMPUTERS; Pg. 7, 616 words, Gareth Powell</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_20"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('300')" type="checkbox" value="300" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents45" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents45">45.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=314237&amp;docNo=45" target="_parent">BITS &amp; BOBS</a><br class="br" /><span class="notranslate">Sydney Morning Herald (Australia)</span>, September 18, 1989 Monday, COMPUTERS; Pg. 6, 1107 words, Gareth Powell</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_21"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('301')" type="checkbox" value="301" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents46" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents46">46.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=314237&amp;docNo=46" target="_parent">IMPORTERS BLITZ 'GREY MARKETERS'</a><br class="br" /><span class="notranslate">The Sun Herald (Sydney, Australia)</span>, December 31, 1989 Sunday, COMPUTERS; Pg. 38, 416 words, DAVID FRITH</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_22"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('302')" type="checkbox" value="302" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents47" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents47">47.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=303830&amp;docNo=47" target="_parent">Microsoft</a><br class="br" /><span class="notranslate">The Globe and Mail (Canada)</span>, March 28, 1989 Tuesday, 144 words, GAM</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_23"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('303')" type="checkbox" value="303" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents48" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents48">48.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=303830&amp;docNo=48" target="_parent">Xerox-Apple lawsuit has computer industry confused</a><br class="br" /><span class="notranslate">The Globe and Mail (Canada)</span>, December 16, 1989 Saturday, 784 words, GEOFFREY ROWAN; GAM</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_24"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('304')" type="checkbox" value="304" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents49" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents49">49.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=138620&amp;docNo=49" target="_parent">Computer Guardian: Driving need to expand - Why CD ROM is forced to play a waiting game</a><br class="br" /><span class="notranslate">The Guardian (London)</span>, October 12, 1989, 982 words, By JACK SCHOFIELD</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_25"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('305')" type="checkbox" value="305" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents50" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents50">50.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267537069&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=26&amp;resultsUrlKey=29_T27267537073&amp;cisb=22_T27267537072&amp;treeMax=true&amp;treeWidth=0&amp;csi=6742&amp;docNo=50" target="_parent">Net Up 56.8% At Microsoft</a><br class="br" /><span class="notranslate">The New York Times</span>, January 18, 1990, Thursday, Late Edition - Final, Section D; Page 6, Column 6; Financial Desk, 179 words, Special to The New York Times</td></tr>
+
+</tbody></table>
+</form>
+
+
+</td>
+</tr>
+</tbody></table>
+
+
+
+
+<span style="width:100%;clear:both;"><a id="resultsListSkipNav" name="resultsListSkipNav"></a></span>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td align="center" class="tenpix paddingtop" style="border-top: 1px solid #ccc;">
+
+
+
+
+
+
+<table width="100%" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td width="10" rowspan="4" align="center"><img src="images/s.gif" width="10" height="10" alt="" /></td>
+<td colspan="2" align="center"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+<td width="7" rowspan="4" align="center"><img src="images/s.gif" width="10" height="7" alt="" /></td>
+</tr>
+<tr>
+<td>
+<table id="searchDetails" role="complementary" width="100%" border="0" cellspacing="0" cellpadding="0">
+
+
+
+
+<tbody><tr>
+<td align="right" nowrap="nowrap" class="l3e" width="auto" style="font-weight: normal;font-size:8pt;;color: #666666;">Search Terms</td>
+<td width="10"><img src="images/s.gif" width="7" height="7" alt="" /></td>
+<td class="l3">[((microsoft) and Date(geq(3/9/1989) and leq(3/8/1990)))]
+
+
+
+(698)
+
+
+
+
+
+
+
+
+
+<img src="images/s.gif" width="3" height="" alt="" />
+<a class="link1" href="javascript:viewSrchDtlsOpenPopUp();">
+View search details</a>
+<div id="genericErrorDiv" style="display: none;z-index: 2">
+<div id="genericErrorDivContent" style="font-family: Open Sans, Verdana,Arial,Helvetica,sans-serif;font-size: 8pt;">
+<h3 style="color:#903; font-family: Open Sans, Verdana,Arial,Helvetica,sans-serif;font-size: 8pt;">
+<strong>Search Details</strong></h3>
+
+
+<!--  <p id="errString" style="color:#666666;font-family:Verdana,Arial,Helvetica,sans-serif;font-size:8pt;">
+You searched for:
+((microsoft) and Date(geq(3/9/1989) and leq(3/8/1990)))</p> -->
+
+
+
+<p id="errString" style="color:#666666;font-family: Open Sans,Verdana,Arial,Helvetica,sans-serif;font-size:8pt;">
+You searched for:
+((microsoft) and Date(geq(3/9/1989) and leq(3/8/1990)))
+</p>
+
+
+
+
+
+<div class="errBtn">
+<a class="link1" href="javascript:viewSrchDtlsHidePopUp();">
+<img src="/lnacui2api/images/ButClose.gif?version=1515443602000" height="19" width="45" border="0" title="Close" alt="" />
+</a>
+</div>
+</div>
+</div>
+
+
+
+
+</td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+
+
+
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Source</td>
+<td><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3" valign="middle"><img src="/lnacui2api/images/IconInfo.gif?version=1515443602000" height="14" width="14" align="absmiddle" style="border:0;cursor:pointer;" title="Source Information" alt="Source Information" onclick="return openSourceInfoWindow('/lnacui2api/results/shared/sourceInfo.do?sourceName=Newspaper+Stories%2C+Combined+Papers&amp;sourceId=S_AC00NBGenSrch.0_8411')" /><img src="images/s.gif" width="4" height="7" alt="" />[Newspaper Stories, Combined Papers]</td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Show</td>
+<td><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3">List</td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Sort</td>
+<td><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3">Relevance</td>
+<td><img src="images/s.gif" width="7" height="7" alt="" /></td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Date/Time</td>
+<td width="10"><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3">March 9 2018 20:09:35</td>
+
+
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap" class="l3"><img src="images/s.gif" width="5" height="10" alt="" /></td>
+</tr>
+
+
+
+
+
+
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr>
+<td align="left" width="23%"></td>
+<td align="center">
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td>
+
+<table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" valign="middle"></td><td align="right"><a href="javascript:pagination('/lnacui2api/results/listview/listview.do?start=1');"><img src="images/IconPaginationFirst.gif" border="0" alt="View first document set" "="" title="View first document set" /></a><img src="images/s.gif" alt="" height="0" width="4" border="0" /><a href="javascript:pagination('/lnacui2api/results/listview/listview.do?start=1');"><img src="images/IconPaginationPrevious.gif" border="0" alt="View previous document set" "="" title="View previous document set" /></a></td><td align="right" valign="middle" class="l3"><img src="images/s.gif" alt="" width="3" height="16" border="0" /></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644175306;pagination('/lnacui2api/results/listview/listview.do?start=1');">1</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap=""> <span class="l3j">2</span></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644175306;pagination('/lnacui2api/results/listview/listview.do?start=51');">3</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644175306;pagination('/lnacui2api/results/listview/listview.do?start=76');">4</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644175306;pagination('/lnacui2api/results/listview/listview.do?start=101');">5</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644175306;pagination('/lnacui2api/results/listview/listview.do?start=126');">6</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644175306;pagination('/lnacui2api/results/listview/listview.do?start=151');">7</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644175306;pagination('/lnacui2api/results/listview/listview.do?start=176');">8</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644175306;pagination('/lnacui2api/results/listview/listview.do?start=201');">9</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644175306;pagination('/lnacui2api/results/listview/listview.do?start=226');">10</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644175306;pagination('/lnacui2api/results/listview/listview.do?start=251');">11</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="7" height="16" border="0" /></td><td align="right"><a href="javascript:rand=1520644175306;pagination('/lnacui2api/results/listview/listview.do?start=51');"><img src="images/IconPaginationNext.gif" border="0" alt="View next document set" "="" title="View next document set" /></a><img src="images/s.gif" alt="" height="0" width="4" border="0" /><a href="javascript:rand=1520644175306;pagination('/lnacui2api/results/listview/listview.do?start=676');"><img src="images/IconPaginationLast.gif" border="0" alt="View last document set" "="" title="View last document set" /></a></td></tr></tbody></table>
+
+
+</td>
+</tr>
+</tbody></table>
+
+</td>
+
+
+
+
+<td class="l3" align="right" nowrap="nowrap">
+<a class="link1" href="javascript:backToTopLink();">
+Back to Top</a>
+</td>
+
+
+
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td align="center"><img src="images/s.gif" width="10" height="10" alt="" /></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+<script>
+var viewSrchDetails_Overlay_Suptd = 'false';
+</script>
+
+</td>
+</tr>
+</tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript">
+function setParentAsTarget(hrefLink, framesetName) {
+try {
+if(parent.document.getElementById(framesetName)!= null) {
+hrefLink.target='_parent';
+}
+} catch (e) {
+}
+}
+
+function openTerms(anchor) {
+features = createWindowFeatures(800, 400, 9, 0, 0, 0, 1, 1);
+
+if (window.help &amp;&amp; !window.help.closed) {
+help.focus();
+}
+help=window.open(anchor.href, anchor.target, features);
+return false;
+}
+
+function openWindow(page, w, h){
+var popupWin = window.open(page, "popup", "width=" + w + ",height=" + h);
+return popupWin;
+}
+
+function openCopyright(anchor) {
+features = createWindowFeatures(620, 400, 5, 0, 0, 0, 1, 1);
+
+if (window.help &amp;&amp; !window.help.closed) {
+help.focus();
+}
+help=window.open(anchor.href, anchor.target, features);
+return false;
+}
+
+function openExternalLink(url){
+// Left aligned popup window
+var str_target = "_external";
+var int_winWidth  = 625;
+var int_winHeight = 460;
+var str_attribute = "top=0,left=0,toolbar=yes,scrollbars=yes,location=yes,resizable=yes,menubar=yes,width="+int_winWidth+",height="+int_winHeight;
+// Calls the popup window function
+var winVar = window.open(url,str_target,str_attribute);
+winVar.focus();
+}
+</script>
+<style>
+.cvdFooter {
+color: #333;
+font-size:7pt;
+border-top: 1px solid #CCC;
+margin-top:40px;
+}
+
+.logo {
+padding:10px;
+border-right:1px dotted #ccc;
+font-family:Open Sans,Verdana, Arial, Helvetica, sans-serif;
+}
+
+.footerPadding {
+padding:9px 10px 10px 10px;
+}
+
+.footerLink a:link, .footerLink a:visited, .footerLink a:active{
+font-size:7pt;
+color:#004b91 ;
+font-family:Open Sans,verdana;
+text-decoration: none;
+font-weight: normal;
+}
+
+.footerLink a:hover{
+text-decoration: underline;
+}
+
+.l3d{
+FONT-SIZE: 8pt;
+COLOR: #cccccc;
+}
+
+.copyright{
+font-size:7pt;
+color:#333 ;
+}
+
+
+.cvdFooter span, .cvdFooter label, .cvdFooter td, .cvdFooter th{
+font-family:Open Sans,verdana,arial,helvetica,sans-serif;
+}
+
+
+</style>
+
+
+
+<div id="cvdFooterDiv" class="cvdFooter" align="left">
+<table cellpadding="0" cellspacing="0" border="0" align="left" width="100%">
+
+<tbody><tr>
+
+
+
+
+
+<td align="left" valign="middle" width="130" class="logo">
+
+
+
+
+
+
+
+
+
+
+<img src="/lnacui2api/images/LexisNexisFooter.png?version=1515443602000" height="21" width="109" border="0" title="LexisNexis®" alt="LexisNexis®" />
+
+</td>
+
+
+
+
+<td align="left" class="footerPadding">
+<table cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0" border="0">
+<tbody><tr>
+<td class="footerLink"><a class="footerLink" href="http://www.lexisnexis.com/about/" onclick="return openTerms(this)">
+
+
+
+
+
+
+
+
+
+About LexisNexis®
+
+</a></td>
+
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+<td><span class="l3d">|</span></td>
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+<td class="footerLink"><a class="footerLink" href="auth/displayterms.do?content=GENERAL" onclick="return openTerms(this)">
+
+
+
+
+
+
+
+
+
+Terms &amp; Conditions
+
+</a></td>
+
+
+
+
+
+
+
+
+
+
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+<td><span class="l3d">|</span></td>
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+
+<td class="footerLink"><a class="footerLink" href="auth/myid.do" onclick="openWindow('/lnacui2api/auth/myid.do',290,140);return false;" target="_self">My ID</a></td>
+
+
+
+
+
+
+
+
+
+
+
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td align="left"><img src="images/s.gif" width="1" height="5" alt="" /></td>
+</tr>
+<tr>
+<td align="left"><span class="footerLink"><a class="footerLink" href="http://www.lexisnexis.com/terms/copyright.asp" onclick="return openCopyright(this)">Copyright ©</a></span>
+<span class="copyright">
+<script type="text/javascript">document.write(new Date().getFullYear());</script>2018</span><img height="1" src="images/s.gif" width="2" border="0" alt="" />
+<!-- Webstar 3559663 - Update Marketing Pop-up header and footer : Starts -->
+
+
+
+<span class="footerLink"><a class="footerLink" href="javascript:openExternalLink('http://www.lexisnexis.com')">
+
+
+
+
+
+
+
+
+
+
+LexisNexis®.
+
+ 
+</a></span>
+<span class="copyright">All rights reserved.</span>
+
+
+<!-- Webstar 3559663 - Update Marketing Pop-up header and footer : Ends -->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+
+
+<td width:="" style="width: 150px" ;="">
+<a href="http://www.relx.com" target="_blank" class="relx-logo"><img src="/lnacui2api/images/re-logo.png?version=1515443602000" height="20" width="123" border="0" title="RELX Group" alt="RELX Group" /></a>
+</td>
+
+
+</tr>
+</tbody></table>
+
+</div>
+
+
+
+
+
+
+</td>
+</tr>
+</tbody></table>
+
+
+ 
+</div><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google Translate" /></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;" /><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+
+
+
+
+
+
+
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"/></svg></div></div><iframe frameborder="0" class="goog-te-menu-frame skiptranslate" title="Language Translate Widget" style="visibility: visible; box-sizing: content-box; width: 977px; height: 263px; display: none;"></iframe><iframe frameborder="0" class="goog-te-menu-frame skiptranslate" title="Language Translate Widget" style="visibility: visible; box-sizing: content-box; width: 197px; height: 69px; display: none;"></iframe><div id="popupMask"></div><div id="popupContainer"><div id="popupInner"><div id="popupTitleBar"><div id="popupTitle"></div><div id="popupControls"></div></div></div></div></body></html>

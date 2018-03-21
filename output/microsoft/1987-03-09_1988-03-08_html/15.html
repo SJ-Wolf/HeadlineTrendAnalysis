@@ -1,0 +1,806 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" style="height: 100%;"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Language" content="en_US" /> 
+<meta http-equiv="expires" content="Sat, 10 Mar 2018 01:21:51 GMT" />
+<title>LexisNexis® Academic: Results</title>
+<base href="http://www.lexisnexis.com:80/lnacui2api/" />
+
+
+
+<script type="text/javascript">djConfig = {parseWidgets: false};</script>
+
+
+
+<link rel="stylesheet" type="text/css" href="stylesheets/asn_search.css" />
+<link rel="stylesheet" href="stylesheets/Global.css" type="text/css" />
+<link rel="stylesheet" href="stylesheets/Styles.css" type="text/css" />
+<link rel="stylesheet" href="stylesheets/subModal.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/subModal.css" />
+
+
+
+
+
+
+
+<script type="text/javascript" src="js/mynexis/subModalcommon.js?v=1515443602000"></script>
+
+<script type="text/javascript" src="js/mynexis/subModal.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/dojo/dojo.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/dojoSubmit.js?v=1515443602000"></script>
+<script language="javascript" type="text/javascript">
+dojo.require("dojo.event.*");
+dojo.require("dojo.io.*");
+</script>
+
+<script type="text/javascript" src="js/results/resultsInclude.js?v=1515443602000"></script>
+<!-- Megha : focus by date : starts -->
+<script type="text/javascript" src="/lnacui2api/djs/results/resultsDateValidations_en_US_enAcademic.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/mynexis/mynValidation.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/mynexis/myNexis.js?v=1515443602000"></script>
+<script type="text/javascript" src="dwr/interface/MyNexisManagerAjaxService.js?v=1515443602000"></script>
+<script type="text/javascript" src="dwr/engine.js?v=1515443602000"></script>
+<script type="text/javascript" src="dwr/util.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/UXFramework20070309.js?v=1515443602000"></script>
+
+
+<script type="text/javascript" src="/lnacui2api/djs/results/results_en_US_enAcademic.js?v=1515443602000"></script>
+
+
+<script type="text/javascript" src="/lnacui2api/djs/results/results1_en_US_enAcademic.js?v=1515443602000"></script>
+<script type="text/javascript" src="/lnacui2api/djs/results/results2_en_US_enAcademic.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/common.js?v=1515443602000"></script>
+
+
+
+
+
+
+
+
+<style type="text/css">
+a:visited {
+color: #8f2b8c;
+}
+
+</style>
+<script language="javascript" type="text/javascript">
+function backToTopLink() {
+location.hash = 'top';
+}
+function hideDiv(viewMultilk) {
+if(viewMultilk==true)
+{
+document.getElementById("classOuterDiv").style.display='none';
+
+}
+}
+
+function hideLafnMessage() {
+document.getElementById("lafnContinueMsg").style.display='none';
+}
+
+
+// RAP Webstar fix 2461713 for Dec 2008 - Suman_Majumder: Start
+function reloadClassification(sortChange) {
+var tempVar = sortChange;
+if(tempVar == 'true') {
+setTimeout("changeClassificationOption()", 500);
+}
+}
+// RAP Webstar fix 2461713 for Dec 2008 - Suman_Majumder: End
+
+</script>
+
+
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css" /><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/translate_static/js/element/main.js"></script><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/element/TE_20170911_00/e/js/element/element_main.js"></script></head>
+
+<body bgcolor="#FFFFFF" style="margin: 0px; position: relative; min-height: 100%; top: 40px;" onload="hideDiv(true);initBoxes('listview');callSubScroll('frm_tagged_documents',0,376);updateResultsNav();reloadClassification('false');scrollToHitPos('false');" onclick="storeScrollToHitPos('false');"><div class="skiptranslate" style=""><iframe id=":1.container" class="goog-te-banner-frame skiptranslate" frameborder="0" src="javascript:''" style="visibility:visible"></iframe></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="classOuterDiv" style="display: none; background-color: white; background: white; overflow: auto; z-index: 1; z-index: 10; margin-left: 0; margin-right: 0; margin-bottom: 0">
+</div>
+
+
+<div id="classInnerDiv" style="margin: 0px"><a name="top"></a>
+
+
+
+
+
+<a href="javascript:scrollToSkipLink('resultsListSkipNav');"><img src="images/s.gif" width="1" height="1" border="0" alt="Skip to end of result list" /></a><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td><form name="results_listview_ResultsListForm" method="post" action="/lnacui2api/results/listview/listview.do">
+<input type="hidden" name="risb" value="21_T27267543401" />
+<input type="hidden" name="formatType" value="LIST" />
+<input type="hidden" name="resultsRisbId" value="21_T27267543401" />
+<input type="hidden" name="sortId" value="RELEVANCE" />
+<input type="hidden" name="test" value="results/listview/listview.do" />
+<input type="hidden" name="fullPageURI" value="LIST" />
+<input type="hidden" name="contFrmReloaded" value="false" />
+<input type="hidden" name="cutomLink" value="/lnacui2api/results/shared/exitLinks.do?utilityLinkDispatch=results_docview_CustomSegRenderer&amp;pageOrigin=results_listview_Listview&amp;formStateKey=29_T27267543405" />
+<input type="hidden" name="reloadPage" />
+<input type="hidden" name="exitKey" value="29_T27267543405" />
+<input type="hidden" name="returnToKey" value="20_T27267543467" />
+<input type="hidden" id="startDocNumber" value="376" />
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tbody><tr>
+<td align="center" class="l3"><b> 
+
+
+
+
+
+Selected Group:<img src="images/s.gif" width="7" height="1" alt="" />
+Newspapers
+
+ </b> <img src="images/s.gif" width="5" height="1" alt="" /> (<a class="rslink" href="" onclick="return viewAllResults()"> View All Results</a>) </td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+
+
+
+<table>
+<tbody><tr><td>
+<div>
+<span id="google_translate_element" style="padding-left: 9px;float:left;margin-bottom: 1px;"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage"><select class="goog-te-combo"><option value="">Select Language</option><option value="en">English</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="am">Amharic</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="az">Azerbaijani</option><option value="eu">Basque</option><option value="be">Belarusian</option><option value="bn">Bengali</option><option value="bs">Bosnian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="co">Corsican</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="fy">Frisian</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="ha">Hausa</option><option value="haw">Hawaiian</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kn">Kannada</option><option value="kk">Kazakh</option><option value="km">Khmer</option><option value="ko">Korean</option><option value="ku">Kurdish (Kurmanji)</option><option value="ky">Kyrgyz</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="lb">Luxembourgish</option><option value="mk">Macedonian</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="ne">Nepali</option><option value="no">Norwegian</option><option value="ps">Pashto</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="pa">Punjabi</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sm">Samoan</option><option value="gd">Scots Gaelic</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="sn">Shona</option><option value="sd">Sindhi</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="tg">Tajik</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="uz">Uzbek</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option><option value="xh">Xhosa</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="zu">Zulu</option></select></div>Powered by <span style="white-space:nowrap"><a class="goog-logo-link" href="https://translate.google.com" target="_blank"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Translate" />Translate</a></span></div></span>
+
+<span style="float:left; margin-top:5px;display: none;" id="showOrigBut">
+<img src="/lnacui2api/images/ButShowOriginalEnglish.gif?version=1515443602000" height="19" width="99" border="0" title="Show Original" alt="" onclick="javascript:showOriginal();" />
+</span>
+
+
+<span class="notranslate">
+<a class="whats-link" target="_self" onclick="javascript:openDisclaimerText('This is a hyperlink provided for your convenience. Translations which you request are provided by Google Translate. LexisNexis is not responsible for (and makes no warranty with respect to) the accuracy, adequacy, reliability or completeness of any translations and disclaims all liability, loss and damage of any nature arising in connection with translations. By use of this hyperlink to obtain a translation you confirm your agreement to the foregoing.');return false;" href="">Disclaimer</a>
+</span>
+
+</div>
+</td></tr></tbody></table>
+<script>
+var myVar;
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({
+pageLanguage: 'auto'
+}, 'google_translate_element');
+
+myVar=setInterval(function(){chkGoogle()},1000);
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+
+<doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><table width="100%" border="0" cellspacing="0" cellpadding="0" role="main">
+
+
+
+
+<tbody><tr class="nopadding">
+<td><a name="DOCNO_1"></a></td>
+</tr>
+<tr valign="baseline" height="8" class="toprow"><th width="6%" align="left" valign="center" nowrap="nowrap"><span><input type="checkbox" id="frm_control_box" title="Click here to select or de-select all" name="frm_control_box" value="checkbox" onclick="javascript:subSetAllSelectionStatus()" /></span></th><th width="94%" align="left" valign="center" nowrap="nowrap"><span>Results</span></th></tr><tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2239')" type="checkbox" value="2239" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents376" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents376">376.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=314237&amp;docNo=376" target="_parent">SHAREWARE CAN PAY ITS WAY;  COMPUTERS</a><br class="br" /><span class="notranslate">The Sun Herald (Sydney, Australia)</span>, November 29, 1987 Sunday, HOME AND GARDEN; Pg. 94, 464 words, David Frith</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_2"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2240')" type="checkbox" value="2240" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents377" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents377">377.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=314237&amp;docNo=377" target="_parent">A LOOK AT THE FUTURE... THROUGH A CLEAR WINDOW</a><br class="br" /><span class="notranslate">Sydney Morning Herald (Australia)</span>, December 14, 1987 Monday, COMPUTERS; Pg. 14, 1203 words, GARETH POWELL</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_3"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2241')" type="checkbox" value="2241" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents378" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents378">378.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=314237&amp;docNo=378" target="_parent">LEGITIMISING FERDINAND AND IMELDA</a><br class="br" /><span class="notranslate">Sydney Morning Herald (Australia)</span>, January 4, 1988 Monday, COMPUTERS; Pg. 12, 858 words, GARETH POWELL</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_4"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2242')" type="checkbox" value="2242" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents379" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents379">379.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=314237&amp;docNo=379" target="_parent">GREAT STUFF, BUT ONLY IF YOU ARE DUTCH</a><br class="br" /><span class="notranslate">Sydney Morning Herald (Australia)</span>, January 11, 1988 Monday, COMPUTERS; Pg. 15, 878 words</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_5"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2243')" type="checkbox" value="2243" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents380" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents380">380.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=314237&amp;docNo=380" target="_parent">NOW YOU, TOO, CAN BE A COMPUTER PROGRAMMER;  CONTINUING EDUCATION PROGRAM</a><br class="br" /><span class="notranslate">Sydney Morning Herald (Australia)</span>, January 19, 1988 Tuesday, SPECIAL SUPPLEMENT; Pg. 6, 294 words, A special guide compiled by KEN MATHERS in concert with the University of Sydney</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_6"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2244')" type="checkbox" value="2244" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents381" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents381">381.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=314237&amp;docNo=381" target="_parent">HYPERTEXT - SOME FOOD FOR THE MIND;  HOW THE SECOND REVOLUTION IN LEARNING CAME ABOUT</a><br class="br" /><span class="notranslate">Sydney Morning Herald (Australia)</span>, February 22, 1988 Monday, COMPUTERS; Pg. 22, 1936 words</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_7"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2245')" type="checkbox" value="2245" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents382" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents382">382.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=314237&amp;docNo=382" target="_parent">NEWSBYTES</a><br class="br" /><span class="notranslate">Sydney Morning Herald (Australia)</span>, February 29, 1988 Monday, COMPUTERS; Pg. 23, 1121 words</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_8"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2246')" type="checkbox" value="2246" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents383" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents383">383.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=244788&amp;docNo=383" target="_parent">HP DEVELOPS NEWWAVE ENVIRONMENT</a><br class="br" /><span class="notranslate">COURIER-MAIL</span>, December 8, 1987 Tuesday, 352 words</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_9"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2247')" type="checkbox" value="2247" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents384" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents384">384.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=244788&amp;docNo=384" target="_parent"><span class="notranslate">COURIER-MAIL</span></a>, February 2, 1988 Tuesday, 234 words</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_10"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2248')" type="checkbox" value="2248" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents385" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents385">385.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=244788&amp;docNo=385" target="_parent">QUATTRO LEADS RACE TO DETHRONE LOTUS 1-2-3</a><br class="br" /><span class="notranslate">COURIER-MAIL</span>, February 23, 1988 Tuesday, 491 words, YOUNG P</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_11"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2249')" type="checkbox" value="2249" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents386" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents386">386.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=244784&amp;docNo=386" target="_parent">Paper chase wealth is not the solution</a><br class="br" /><span class="notranslate">Herald</span>, October 20, 1987 Tuesday, HERALD BUSINESS; Pg. 17, 1652 words, MCCRANN T</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_12"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2250')" type="checkbox" value="2250" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents387" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents387">387.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=244810&amp;docNo=387" target="_parent"><span class="notranslate">Hobart Mercury</span></a>, January 5, 1988 Tuesday, 388 words, HINLEY DAVID</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_13"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2251')" type="checkbox" value="2251" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents388" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents388">388.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=244788&amp;docNo=388" target="_parent">COMPAQ WILL WORK UNDER IBM'S MS-DOS WITH LIMITS</a><br class="br" /><span class="notranslate">COURIER-MAIL</span>, March 19, 1987 Thursday, 785 words, REES P</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_14"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2252')" type="checkbox" value="2252" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents389" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents389">389.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=244788&amp;docNo=389" target="_parent">SURPRISINGLY SLOW EMERGENCE OF POSSESSION OF WEALTH ISSUE</a><br class="br" /><span class="notranslate">COURIER-MAIL</span>, October 21, 1987 Wednesday, 1392 words, MCCRANN T</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_15"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2253')" type="checkbox" value="2253" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents390" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents390">390.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=303830&amp;docNo=390" target="_parent">TECHNOLOGY   Analysts, competitors heckle IBM over the giant's strategic   gamble</a><br class="br" /><span class="notranslate">The Globe and Mail (Canada)</span>, April 20, 1987 Monday, 762 words, OLIVER BERTIN; GAM</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_16"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2254')" type="checkbox" value="2254" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents391" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents391">391.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=303830&amp;docNo=391" target="_parent">U.S. CORPORATE REPORTS</a><br class="br" /><span class="notranslate">The Globe and Mail (Canada)</span>, May 19, 1987 Tuesday, 1053 words, GAM</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_17"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2255')" type="checkbox" value="2255" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents392" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents392">392.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=303830&amp;docNo=392" target="_parent">TECHNOLOGY   Uh oh, here comes the boss!</a><br class="br" /><span class="notranslate">The Globe and Mail (Canada)</span>, February 16, 1988 Tuesday, 171 words, GAM</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_18"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2256')" type="checkbox" value="2256" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents393" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents393">393.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=10939&amp;docNo=393" target="_parent">Computer Horizons (Software): A third age is soon to dawn</a><br class="br" /><span class="notranslate">The Times (London)</span>, October 20 1987, Tuesday, Issue 62904., 414 words, GEOF WHEELWRIGHT</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_19"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2257')" type="checkbox" value="2257" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents394" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents394">394.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=10939&amp;docNo=394" target="_parent">Computer Horizons (Desktop): There's far more to editing than just sitting at a screen</a><br class="br" /><span class="notranslate">The Times (London)</span>, July 7 1987, Tuesday, Issue 62814., 753 words, TONY DENNIS</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_20"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2258')" type="checkbox" value="2258" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents395" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents395">395.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=138620&amp;docNo=395" target="_parent">Computer Guardian: Big Brother muscle - Three new books about IBM</a><br class="br" /><span class="notranslate">The Guardian (London)</span>, April 23, 1987, 1415 words, By RICHARD SARSON</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_21"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2259')" type="checkbox" value="2259" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents396" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents396">396.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=138620&amp;docNo=396" target="_parent">Computer Guardian: The coming of the clones - The imitators of the IBM micros</a><br class="br" /><span class="notranslate">The Guardian (London)</span>, May 14, 1987, 537 words, By ROBIN BRADBEER</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_22"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2260')" type="checkbox" value="2260" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents397" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents397">397.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=138620&amp;docNo=397" target="_parent">Computer Guardian: Buy low and act fast</a><br class="br" /><span class="notranslate">The Guardian (London)</span>, September 3, 1987, 2004 words, By CAROLINE BERMAN</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_23"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2261')" type="checkbox" value="2261" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents398" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents398">398.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=138620&amp;docNo=398" target="_parent">Computer Guardian (Microfile): Lotus cracks</a><br class="br" /><span class="notranslate">The Guardian (London)</span>, September 24, 1987, 99 words, By JACK SCHOFIELD</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_24"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2262')" type="checkbox" value="2262" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents399" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents399">399.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=138620&amp;docNo=399" target="_parent">Computer Guardian: New personal systems / The data processing manager's dilemma - stick with personal computers or switch to IBM's new PS/2</a><br class="br" /><span class="notranslate">The Guardian (London)</span>, October 22, 1987, 994 words, By ANDREW COWIE</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_25"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('2263')" type="checkbox" value="2263" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents400" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents400">400.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267543401&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=376&amp;resultsUrlKey=29_T27267543405&amp;cisb=22_T27267543404&amp;treeMax=true&amp;treeWidth=0&amp;csi=138620&amp;docNo=400" target="_parent">Computer Guardian: One way to discover how hot your hardware really is - 'Mips' and the new PCW Index</a><br class="br" /><span class="notranslate">The Guardian (London)</span>, November 19, 1987, 1254 words, By JACK SCHOFIELD</td></tr>
+
+</tbody></table>
+</form>
+
+
+</td>
+</tr>
+</tbody></table>
+
+
+
+
+<span style="width:100%;clear:both;"><a id="resultsListSkipNav" name="resultsListSkipNav"></a></span>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td align="center" class="tenpix paddingtop" style="border-top: 1px solid #ccc;">
+
+
+
+
+
+
+<table width="100%" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td width="10" rowspan="4" align="center"><img src="images/s.gif" width="10" height="10" alt="" /></td>
+<td colspan="2" align="center"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+<td width="7" rowspan="4" align="center"><img src="images/s.gif" width="10" height="7" alt="" /></td>
+</tr>
+<tr>
+<td>
+<table id="searchDetails" role="complementary" width="100%" border="0" cellspacing="0" cellpadding="0">
+
+
+
+
+<tbody><tr>
+<td align="right" nowrap="nowrap" class="l3e" width="auto" style="font-weight: normal;font-size:8pt;;color: #666666;">Search Terms</td>
+<td width="10"><img src="images/s.gif" width="7" height="7" alt="" /></td>
+<td class="l3">[((microsoft) and Date(geq(3/9/1987) and leq(3/8/1988)))]
+
+
+
+(460)
+
+
+
+
+
+
+
+
+
+<img src="images/s.gif" width="3" height="" alt="" />
+<a class="link1" href="javascript:viewSrchDtlsOpenPopUp();">
+View search details</a>
+<div id="genericErrorDiv" style="display: none;z-index: 2">
+<div id="genericErrorDivContent" style="font-family: Open Sans, Verdana,Arial,Helvetica,sans-serif;font-size: 8pt;">
+<h3 style="color:#903; font-family: Open Sans, Verdana,Arial,Helvetica,sans-serif;font-size: 8pt;">
+<strong>Search Details</strong></h3>
+
+
+<!--  <p id="errString" style="color:#666666;font-family:Verdana,Arial,Helvetica,sans-serif;font-size:8pt;">
+You searched for:
+((microsoft) and Date(geq(3/9/1987) and leq(3/8/1988)))</p> -->
+
+
+
+<p id="errString" style="color:#666666;font-family: Open Sans,Verdana,Arial,Helvetica,sans-serif;font-size:8pt;">
+You searched for:
+((microsoft) and Date(geq(3/9/1987) and leq(3/8/1988)))
+</p>
+
+
+
+
+
+<div class="errBtn">
+<a class="link1" href="javascript:viewSrchDtlsHidePopUp();">
+<img src="/lnacui2api/images/ButClose.gif?version=1515443602000" height="19" width="45" border="0" title="Close" alt="" />
+</a>
+</div>
+</div>
+</div>
+
+
+
+
+</td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+
+
+
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Source</td>
+<td><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3" valign="middle"><img src="/lnacui2api/images/IconInfo.gif?version=1515443602000" height="14" width="14" align="absmiddle" style="border:0;cursor:pointer;" title="Source Information" alt="Source Information" onclick="return openSourceInfoWindow('/lnacui2api/results/shared/sourceInfo.do?sourceName=Newspaper+Stories%2C+Combined+Papers&amp;sourceId=S_AC00NBGenSrch.0_8411')" /><img src="images/s.gif" width="4" height="7" alt="" />[Newspaper Stories, Combined Papers]</td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Show</td>
+<td><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3">List</td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Sort</td>
+<td><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3">Relevance</td>
+<td><img src="images/s.gif" width="7" height="7" alt="" /></td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Date/Time</td>
+<td width="10"><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3">March 9 2018 20:11:51</td>
+
+
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap" class="l3"><img src="images/s.gif" width="5" height="10" alt="" /></td>
+</tr>
+
+
+
+
+
+
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr>
+<td align="left" width="23%"></td>
+<td align="center">
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td>
+
+<table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" valign="middle"></td><td align="right"><a href="javascript:pagination('/lnacui2api/results/listview/listview.do?start=1');"><img src="images/IconPaginationFirst.gif" border="0" alt="View first document set" "="" title="View first document set" /></a><img src="images/s.gif" alt="" height="0" width="4" border="0" /><a href="javascript:pagination('/lnacui2api/results/listview/listview.do?start=351');"><img src="images/IconPaginationPrevious.gif" border="0" alt="View previous document set" "="" title="View previous document set" /></a></td><td align="right" valign="middle" class="l3"><img src="images/s.gif" alt="" width="3" height="16" border="0" /></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644311991;pagination('/lnacui2api/results/listview/listview.do?start=126');">6</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644311991;pagination('/lnacui2api/results/listview/listview.do?start=151');">7</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644311991;pagination('/lnacui2api/results/listview/listview.do?start=176');">8</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644311991;pagination('/lnacui2api/results/listview/listview.do?start=201');">9</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644311991;pagination('/lnacui2api/results/listview/listview.do?start=226');">10</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644311991;pagination('/lnacui2api/results/listview/listview.do?start=251');">11</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644311991;pagination('/lnacui2api/results/listview/listview.do?start=276');">12</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644311991;pagination('/lnacui2api/results/listview/listview.do?start=301');">13</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644311991;pagination('/lnacui2api/results/listview/listview.do?start=326');">14</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644311991;pagination('/lnacui2api/results/listview/listview.do?start=351');">15</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap=""> <span class="l3j">16</span></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644311991;pagination('/lnacui2api/results/listview/listview.do?start=401');">17</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644311991;pagination('/lnacui2api/results/listview/listview.do?start=426');">18</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520644311991;pagination('/lnacui2api/results/listview/listview.do?start=451');">19</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="7" height="16" border="0" /></td><td align="right"><a href="javascript:rand=1520644311991;pagination('/lnacui2api/results/listview/listview.do?start=401');"><img src="images/IconPaginationNext.gif" border="0" alt="View next document set" "="" title="View next document set" /></a><img src="images/s.gif" alt="" height="0" width="4" border="0" /><a href="javascript:rand=1520644311991;pagination('/lnacui2api/results/listview/listview.do?start=451');"><img src="images/IconPaginationLast.gif" border="0" alt="View last document set" "="" title="View last document set" /></a></td></tr></tbody></table>
+
+
+</td>
+</tr>
+</tbody></table>
+
+</td>
+
+
+
+
+<td class="l3" align="right" nowrap="nowrap">
+<a class="link1" href="javascript:backToTopLink();">
+Back to Top</a>
+</td>
+
+
+
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td align="center"><img src="images/s.gif" width="10" height="10" alt="" /></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+<script>
+var viewSrchDetails_Overlay_Suptd = 'false';
+</script>
+
+</td>
+</tr>
+</tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript">
+function setParentAsTarget(hrefLink, framesetName) {
+try {
+if(parent.document.getElementById(framesetName)!= null) {
+hrefLink.target='_parent';
+}
+} catch (e) {
+}
+}
+
+function openTerms(anchor) {
+features = createWindowFeatures(800, 400, 9, 0, 0, 0, 1, 1);
+
+if (window.help &amp;&amp; !window.help.closed) {
+help.focus();
+}
+help=window.open(anchor.href, anchor.target, features);
+return false;
+}
+
+function openWindow(page, w, h){
+var popupWin = window.open(page, "popup", "width=" + w + ",height=" + h);
+return popupWin;
+}
+
+function openCopyright(anchor) {
+features = createWindowFeatures(620, 400, 5, 0, 0, 0, 1, 1);
+
+if (window.help &amp;&amp; !window.help.closed) {
+help.focus();
+}
+help=window.open(anchor.href, anchor.target, features);
+return false;
+}
+
+function openExternalLink(url){
+// Left aligned popup window
+var str_target = "_external";
+var int_winWidth  = 625;
+var int_winHeight = 460;
+var str_attribute = "top=0,left=0,toolbar=yes,scrollbars=yes,location=yes,resizable=yes,menubar=yes,width="+int_winWidth+",height="+int_winHeight;
+// Calls the popup window function
+var winVar = window.open(url,str_target,str_attribute);
+winVar.focus();
+}
+</script>
+<style>
+.cvdFooter {
+color: #333;
+font-size:7pt;
+border-top: 1px solid #CCC;
+margin-top:40px;
+}
+
+.logo {
+padding:10px;
+border-right:1px dotted #ccc;
+font-family:Open Sans,Verdana, Arial, Helvetica, sans-serif;
+}
+
+.footerPadding {
+padding:9px 10px 10px 10px;
+}
+
+.footerLink a:link, .footerLink a:visited, .footerLink a:active{
+font-size:7pt;
+color:#004b91 ;
+font-family:Open Sans,verdana;
+text-decoration: none;
+font-weight: normal;
+}
+
+.footerLink a:hover{
+text-decoration: underline;
+}
+
+.l3d{
+FONT-SIZE: 8pt;
+COLOR: #cccccc;
+}
+
+.copyright{
+font-size:7pt;
+color:#333 ;
+}
+
+
+.cvdFooter span, .cvdFooter label, .cvdFooter td, .cvdFooter th{
+font-family:Open Sans,verdana,arial,helvetica,sans-serif;
+}
+
+
+</style>
+
+
+
+<div id="cvdFooterDiv" class="cvdFooter" align="left">
+<table cellpadding="0" cellspacing="0" border="0" align="left" width="100%">
+
+<tbody><tr>
+
+
+
+
+
+<td align="left" valign="middle" width="130" class="logo">
+
+
+
+
+
+
+
+
+
+
+<img src="/lnacui2api/images/LexisNexisFooter.png?version=1515443602000" height="21" width="109" border="0" title="LexisNexis®" alt="LexisNexis®" />
+
+</td>
+
+
+
+
+<td align="left" class="footerPadding">
+<table cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0" border="0">
+<tbody><tr>
+<td class="footerLink"><a class="footerLink" href="http://www.lexisnexis.com/about/" onclick="return openTerms(this)">
+
+
+
+
+
+
+
+
+
+About LexisNexis®
+
+</a></td>
+
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+<td><span class="l3d">|</span></td>
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+<td class="footerLink"><a class="footerLink" href="auth/displayterms.do?content=GENERAL" onclick="return openTerms(this)">
+
+
+
+
+
+
+
+
+
+Terms &amp; Conditions
+
+</a></td>
+
+
+
+
+
+
+
+
+
+
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+<td><span class="l3d">|</span></td>
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+
+<td class="footerLink"><a class="footerLink" href="auth/myid.do" onclick="openWindow('/lnacui2api/auth/myid.do',290,140);return false;" target="_self">My ID</a></td>
+
+
+
+
+
+
+
+
+
+
+
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td align="left"><img src="images/s.gif" width="1" height="5" alt="" /></td>
+</tr>
+<tr>
+<td align="left"><span class="footerLink"><a class="footerLink" href="http://www.lexisnexis.com/terms/copyright.asp" onclick="return openCopyright(this)">Copyright ©</a></span>
+<span class="copyright">
+<script type="text/javascript">document.write(new Date().getFullYear());</script>2018</span><img height="1" src="images/s.gif" width="2" border="0" alt="" />
+<!-- Webstar 3559663 - Update Marketing Pop-up header and footer : Starts -->
+
+
+
+<span class="footerLink"><a class="footerLink" href="javascript:openExternalLink('http://www.lexisnexis.com')">
+
+
+
+
+
+
+
+
+
+
+LexisNexis®.
+
+ 
+</a></span>
+<span class="copyright">All rights reserved.</span>
+
+
+<!-- Webstar 3559663 - Update Marketing Pop-up header and footer : Ends -->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+
+
+<td width:="" style="width: 150px" ;="">
+<a href="http://www.relx.com" target="_blank" class="relx-logo"><img src="/lnacui2api/images/re-logo.png?version=1515443602000" height="20" width="123" border="0" title="RELX Group" alt="RELX Group" /></a>
+</td>
+
+
+</tr>
+</tbody></table>
+
+</div>
+
+
+
+
+
+
+</td>
+</tr>
+</tbody></table>
+
+
+ 
+</div><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google Translate" /></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;" /><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+
+
+
+
+
+
+
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"/></svg></div></div><iframe frameborder="0" class="goog-te-menu-frame skiptranslate" title="Language Translate Widget" style="visibility: visible; box-sizing: content-box; width: 977px; height: 263px; display: none;"></iframe><iframe frameborder="0" class="goog-te-menu-frame skiptranslate" title="Language Translate Widget" style="visibility: visible; box-sizing: content-box; width: 197px; height: 69px; display: none;"></iframe><div id="popupMask"></div><div id="popupContainer"><div id="popupInner"><div id="popupTitleBar"><div id="popupTitle"></div><div id="popupControls"></div></div></div></div></body></html>

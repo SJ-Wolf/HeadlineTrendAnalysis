@@ -1,0 +1,806 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" style="height: 100%;"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Language" content="en_US" /> 
+<meta http-equiv="expires" content="Sat, 10 Mar 2018 07:49:26 GMT" />
+<title>LexisNexis® Academic: Results</title>
+<base href="http://www.lexisnexis.com:80/lnacui2api/" />
+
+
+
+<script type="text/javascript">djConfig = {parseWidgets: false};</script>
+
+
+
+<link rel="stylesheet" type="text/css" href="stylesheets/asn_search.css" />
+<link rel="stylesheet" href="stylesheets/Global.css" type="text/css" />
+<link rel="stylesheet" href="stylesheets/Styles.css" type="text/css" />
+<link rel="stylesheet" href="stylesheets/subModal.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/subModal.css" />
+
+
+
+
+
+
+
+<script type="text/javascript" src="js/mynexis/subModalcommon.js?v=1515443602000"></script>
+
+<script type="text/javascript" src="js/mynexis/subModal.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/dojo/dojo.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/dojoSubmit.js?v=1515443602000"></script>
+<script language="javascript" type="text/javascript">
+dojo.require("dojo.event.*");
+dojo.require("dojo.io.*");
+</script>
+
+<script type="text/javascript" src="js/results/resultsInclude.js?v=1515443602000"></script>
+<!-- Megha : focus by date : starts -->
+<script type="text/javascript" src="/lnacui2api/djs/results/resultsDateValidations_en_US_enAcademic.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/mynexis/mynValidation.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/mynexis/myNexis.js?v=1515443602000"></script>
+<script type="text/javascript" src="dwr/interface/MyNexisManagerAjaxService.js?v=1515443602000"></script>
+<script type="text/javascript" src="dwr/engine.js?v=1515443602000"></script>
+<script type="text/javascript" src="dwr/util.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/UXFramework20070309.js?v=1515443602000"></script>
+
+
+<script type="text/javascript" src="/lnacui2api/djs/results/results_en_US_enAcademic.js?v=1515443602000"></script>
+
+
+<script type="text/javascript" src="/lnacui2api/djs/results/results1_en_US_enAcademic.js?v=1515443602000"></script>
+<script type="text/javascript" src="/lnacui2api/djs/results/results2_en_US_enAcademic.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/common.js?v=1515443602000"></script>
+
+
+
+
+
+
+
+
+<style type="text/css">
+a:visited {
+color: #8f2b8c;
+}
+
+</style>
+<script language="javascript" type="text/javascript">
+function backToTopLink() {
+location.hash = 'top';
+}
+function hideDiv(viewMultilk) {
+if(viewMultilk==true)
+{
+document.getElementById("classOuterDiv").style.display='none';
+
+}
+}
+
+function hideLafnMessage() {
+document.getElementById("lafnContinueMsg").style.display='none';
+}
+
+
+// RAP Webstar fix 2461713 for Dec 2008 - Suman_Majumder: Start
+function reloadClassification(sortChange) {
+var tempVar = sortChange;
+if(tempVar == 'true') {
+setTimeout("changeClassificationOption()", 500);
+}
+}
+// RAP Webstar fix 2461713 for Dec 2008 - Suman_Majumder: End
+
+</script>
+
+
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css" /><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/translate_static/js/element/main.js"></script><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/element/TE_20170911_00/e/js/element/element_main.js"></script></head>
+
+<body bgcolor="#FFFFFF" style="margin: 0px; position: relative; min-height: 100%; top: 40px;" onload="hideDiv(true);initBoxes('listview');callSubScroll('frm_tagged_documents',0,476);updateResultsNav();reloadClassification('false');scrollToHitPos('false');" onclick="storeScrollToHitPos('false');"><div class="skiptranslate" style=""><iframe id=":1.container" class="goog-te-banner-frame skiptranslate" frameborder="0" src="javascript:''" style="visibility:visible"></iframe></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="classOuterDiv" style="display: none; background-color: white; background: white; overflow: auto; z-index: 1; z-index: 10; margin-left: 0; margin-right: 0; margin-bottom: 0">
+</div>
+
+
+<div id="classInnerDiv" style="margin: 0px"><a name="top"></a>
+
+
+
+
+
+<a href="javascript:scrollToSkipLink('resultsListSkipNav');"><img src="images/s.gif" width="1" height="1" border="0" alt="Skip to end of result list" /></a><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td><form name="results_listview_ResultsListForm" method="post" action="/lnacui2api/results/listview/listview.do">
+<input type="hidden" name="risb" value="21_T27267835929" />
+<input type="hidden" name="formatType" value="LIST" />
+<input type="hidden" name="resultsRisbId" value="21_T27267835929" />
+<input type="hidden" name="sortId" value="RELEVANCE" />
+<input type="hidden" name="test" value="results/listview/listview.do" />
+<input type="hidden" name="fullPageURI" value="LIST" />
+<input type="hidden" name="contFrmReloaded" value="false" />
+<input type="hidden" name="cutomLink" value="/lnacui2api/results/shared/exitLinks.do?utilityLinkDispatch=results_docview_CustomSegRenderer&amp;pageOrigin=results_listview_Listview&amp;formStateKey=29_T27267835933" />
+<input type="hidden" name="reloadPage" />
+<input type="hidden" name="exitKey" value="29_T27267835933" />
+<input type="hidden" name="returnToKey" value="20_T27267835993" />
+<input type="hidden" id="startDocNumber" value="476" />
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tbody><tr>
+<td align="center" class="l3"><b> 
+
+
+
+
+
+Selected Group:<img src="images/s.gif" width="7" height="1" alt="" />
+Newspapers
+
+ </b> <img src="images/s.gif" width="5" height="1" alt="" /> (<a class="rslink" href="" onclick="return viewAllResults()"> View All Results</a>) </td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+
+
+
+<table>
+<tbody><tr><td>
+<div>
+<span id="google_translate_element" style="padding-left: 9px;float:left;margin-bottom: 1px;"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage"><select class="goog-te-combo"><option value="">Select Language</option><option value="en">English</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="am">Amharic</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="az">Azerbaijani</option><option value="eu">Basque</option><option value="be">Belarusian</option><option value="bn">Bengali</option><option value="bs">Bosnian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="co">Corsican</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="fy">Frisian</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="ha">Hausa</option><option value="haw">Hawaiian</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kn">Kannada</option><option value="kk">Kazakh</option><option value="km">Khmer</option><option value="ko">Korean</option><option value="ku">Kurdish (Kurmanji)</option><option value="ky">Kyrgyz</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="lb">Luxembourgish</option><option value="mk">Macedonian</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="ne">Nepali</option><option value="no">Norwegian</option><option value="ps">Pashto</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="pa">Punjabi</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sm">Samoan</option><option value="gd">Scots Gaelic</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="sn">Shona</option><option value="sd">Sindhi</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="tg">Tajik</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="uz">Uzbek</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option><option value="xh">Xhosa</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="zu">Zulu</option></select></div>Powered by <span style="white-space:nowrap"><a class="goog-logo-link" href="https://translate.google.com" target="_blank"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Translate" />Translate</a></span></div></span>
+
+<span style="float:left; margin-top:5px;display: none;" id="showOrigBut">
+<img src="/lnacui2api/images/ButShowOriginalEnglish.gif?version=1515443602000" height="19" width="99" border="0" title="Show Original" alt="" onclick="javascript:showOriginal();" />
+</span>
+
+
+<span class="notranslate">
+<a class="whats-link" target="_self" onclick="javascript:openDisclaimerText('This is a hyperlink provided for your convenience. Translations which you request are provided by Google Translate. LexisNexis is not responsible for (and makes no warranty with respect to) the accuracy, adequacy, reliability or completeness of any translations and disclaims all liability, loss and damage of any nature arising in connection with translations. By use of this hyperlink to obtain a translation you confirm your agreement to the foregoing.');return false;" href="">Disclaimer</a>
+</span>
+
+</div>
+</td></tr></tbody></table>
+<script>
+var myVar;
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({
+pageLanguage: 'auto'
+}, 'google_translate_element');
+
+myVar=setInterval(function(){chkGoogle()},1000);
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+
+<doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><table width="100%" border="0" cellspacing="0" cellpadding="0" role="main">
+
+
+
+
+<tbody><tr class="nopadding">
+<td><a name="DOCNO_1"></a></td>
+</tr>
+<tr valign="baseline" height="8" class="toprow"><th width="6%" align="left" valign="center" nowrap="nowrap"><span><input type="checkbox" id="frm_control_box" title="Click here to select or de-select all" name="frm_control_box" value="checkbox" onclick="javascript:subSetAllSelectionStatus()" /></span></th><th width="94%" align="left" valign="center" nowrap="nowrap"><span>Results</span></th></tr><tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('731')" type="checkbox" value="731" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents476" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents476">476.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=138794&amp;docNo=476" target="_parent">THE DAILY BRIEFING</a><br class="br" /><span class="notranslate">DAILY MAIL (London)</span>, August 15, 2017 Tuesday, 346 words, BY NO BYLINE AVAILABLE</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_2"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('732')" type="checkbox" value="732" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents477" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents477">477.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=138794&amp;docNo=477" target="_parent">THE DAILY BRIEFING</a><br class="br" /><span class="notranslate">DAILY MAIL (London)</span>, August 22, 2017 Tuesday, 360 words, BY NO BYLINE AVAILABLE</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_3"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('733')" type="checkbox" value="733" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents478" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents478">478.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=373667&amp;docNo=478" target="_parent">Game of Thrones: Another jolt to HBO as hackers leak script details of season 7 finale</a><br class="br" /><span class="notranslate">DNA</span>, August 27, 2017 Sunday, 278  words, DNA Web Team</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_4"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('735')" type="checkbox" value="735" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents479" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents479">479.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=313958&amp;docNo=479" target="_parent">Tim Draper: Cut government rules, like building codes, and private sector will solve societys problems</a><br class="br" /><span class="notranslate">The East Bay Times (California)</span>, September 6, 2017 Wednesday, 685 words, Tim Draper</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_5"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('736')" type="checkbox" value="736" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents480" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents480">480.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=318064&amp;docNo=480" target="_parent">Booming cryptocurrency capital market goes legit with first SEC-compliant deal</a><br class="br" /><span class="notranslate">Global Capital Euroweek</span>, August 10, 2017, BLOCKCHAIN,FILECOIN,SEC, 669  words, Lewis McLellan</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_6"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('737')" type="checkbox" value="737" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents481" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents481">481.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=244366&amp;docNo=481" target="_parent">Ethics crucial to securing public trust in digital age</a><br class="br" /><span class="notranslate">The Western Mail</span>, August 21, 2017 Monday, BUSINESS; Pg. 20, 514 words, LLOYD POWELL</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_7"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('738')" type="checkbox" value="738" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents482" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents482">482.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=138620&amp;docNo=482" target="_parent">HBO offered hackers $250,000 'bug bounty', leaked email claims;  Apparently 'surprised' by release of documents, TV network attempts to push back ransom deadline with promise of payment</a><br class="br" /><span class="notranslate">The Guardian(London)</span>, August 11, 2017 Friday 10:29 AM GMT, TECHNOLOGY; Version:1, 488 words, Alex Hern</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_8"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('739')" type="checkbox" value="739" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents483" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents483">483.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=138620&amp;docNo=483" target="_parent">Markets move higher as Japanese growth beats forecasts, but EU data disappoints - as it happened;  EU industrial production falls short of expectationsTrump could struggle to meet economic targets - S&amp;PEuropean markets open higher after last week's turmoilJapanese economy grows faster than forecast</a><br class="br" /><span class="notranslate">The Guardian(London)</span>, August 14, 2017 Monday 7:48 AM GMT, BUSINESS; Version:14, 3601 words, Nick Fletcher</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_9"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('740')" type="checkbox" value="740" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents484" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents484">484.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=138620&amp;docNo=484" target="_parent">The dilemma of the dark web: protecting neo-Nazis and dissidents alike;  Anonymity network Tor has become a safe-space for white supremacists and paedophiles. Yet in nations where access to the net is curtailed, it's a lifeline</a><br class="br" /><span class="notranslate">The Guardian(London)</span>, August 23, 2017 Wednesday 7:00 AM GMT, TECHNOLOGY; Version:1, 1203 words, Alex Hern</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_10"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('741')" type="checkbox" value="741" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents485" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents485">485.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=138620&amp;docNo=485" target="_parent">Why HBO was right to stand its ground against Game of Thrones hackers;  As the network appears to emerge unscathed from a major cyber attack, experts say that hackers misjudged their leverage</a><br class="br" /><span class="notranslate">The Guardian(London)</span>, August 25, 2017 Friday 10:00 AM GMT, MEDIA; Version:1, 1000 words, Rory Carroll in Los Angeles</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_11"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('742')" type="checkbox" value="742" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents486" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents486">486.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=138620&amp;docNo=486" target="_parent">Alleged mastermind behind bank cyber-attacks extradited to UK;  Briton Daniel Kaye, extradited from Germany, is accused of attempting to blackmail Lloyds and Barclays banks</a><br class="br" /><span class="notranslate">The Guardian(London)</span>, August 30, 2017 Wednesday 7:58 PM GMT, UK NEWS; Version:2, 427 words, Patrick Collinson</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_12"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('743')" type="checkbox" value="743" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents487" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents487">487.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=436953&amp;docNo=487" target="_parent">Elderly man ripped off for $25K</a><br class="br" /><span class="notranslate">Eurobodalla Shire Independent</span>, August 22, 2017 Tuesday, 309 words, Zoe Cartwright</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_13"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('744')" type="checkbox" value="744" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents488" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents488">488.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=418998&amp;docNo=488" target="_parent">How to respond if your firm is hacked;  In addition to the NHS, some of the world's biggest businesses including FedEx and Deutsche Bahn were among the victims of this attack.</a><br class="br" /><span class="notranslate">manchestereveningnews.co.uk</span>, August 29, 2017 Tuesday 11:40 AM GMT, BUSINESS; Version:2, 670 words, By Ben Rooth</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_14"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('745')" type="checkbox" value="745" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents489" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents489">489.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=364854&amp;docNo=489" target="_parent">200 accounts 'locked': In Delhi's first WannaCry attack, publishing firm hit</a><br class="br" /><span class="notranslate">Indian Express</span>, August 17, 2017 Thursday, 383  words, anand mohan j</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_15"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('746')" type="checkbox" value="746" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents490" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents490">490.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=364854&amp;docNo=490" target="_parent">Delhi: Probe into WannaCry attack on publication house handed over to Crime Branch</a><br class="br" /><span class="notranslate">Indian Express</span>, September 1, 2017 Friday, 402  words, Anand Mohan J</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_16"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('747')" type="checkbox" value="747" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents491" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents491">491.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=364854&amp;docNo=491" target="_parent">Maximum pain</a><br class="br" /><span class="notranslate">Indian Express</span>, September 1, 2017 Friday, 1014  words, ila patnaik</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_17"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('748')" type="checkbox" value="748" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents492" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents492">492.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=364854&amp;docNo=492" target="_parent">Locky ransomware hits Indian cyberspace, government issues alert</a><br class="br" /><span class="notranslate">Indian Express</span>, September 3, 2017 Sunday, 333  words, Tech Desk</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_18"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('749')" type="checkbox" value="749" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents493" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents493">493.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=364854&amp;docNo=493" target="_parent">CERT-In issues alert on 'Locky Ransomware'</a><br class="br" /><span class="notranslate">Indian Express</span>, September 3, 2017 Sunday, 292  words, ens economic bureau</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_19"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('750')" type="checkbox" value="750" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents494" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents494">494.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=312452&amp;docNo=494" target="_parent">New laws to reform banks</a><br class="br" /><span class="notranslate">The Star (South Africa)</span>, August 18, 2017 Friday, BUSINESS REPORT; Pg. 21, 65 words</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_20"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('751')" type="checkbox" value="751" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents495" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents495">495.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=312452&amp;docNo=495" target="_parent">New laws to reform banks</a><br class="br" /><span class="notranslate">The Star (South Africa)</span>, August 18, 2017 Friday, BUSINESS REPORT; Pg. 21, 65 words</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_21"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('752')" type="checkbox" value="752" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents496" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents496">496.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=312452&amp;docNo=496" target="_parent">Online illegal drug source still operates;  Pushers are peddling their wares from cyberspace</a><br class="br" /><span class="notranslate">The Star (South Africa)</span>, September 02, 2017 Saturday, NEWS; Pg. 7, 749 words</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_22"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('753')" type="checkbox" value="753" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents497" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents497">497.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=312450&amp;docNo=497" target="_parent">New laws to reform banks</a><br class="br" /><span class="notranslate">The Mercury (South Africa)</span>, August 18, 2017 Friday, BUSINESS REPORT; Pg. 19, 65 words</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_23"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('754')" type="checkbox" value="754" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents498" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents498">498.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=312450&amp;docNo=498" target="_parent">Digital currencies set to lose their lustre</a><br class="br" /><span class="notranslate">The Mercury (South Africa)</span>, September 05, 2017 Tuesday, BUSINESS REPORT; Pg. 19, 196 words</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_24"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('755')" type="checkbox" value="755" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents499" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents499">499.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=312439&amp;docNo=499" target="_parent">New laws to reform banks</a><br class="br" /><span class="notranslate">Pretoria News (South Africa)</span>, August 18, 2017 Friday, BUSINESS REPORT; Pg. 19, 65 words</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_25"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('756')" type="checkbox" value="756" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents500" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents500">500.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27267835929&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=476&amp;resultsUrlKey=29_T27267835933&amp;cisb=22_T27267835932&amp;treeMax=true&amp;treeWidth=0&amp;csi=312439&amp;docNo=500" target="_parent">Hollywood facing fresh hack threat</a><br class="br" /><span class="notranslate">Pretoria News Weekend (South Africa)</span>, August 19, 2017 Saturday, Pg. 9, 734 words</td></tr>
+
+</tbody></table>
+</form>
+
+
+</td>
+</tr>
+</tbody></table>
+
+
+
+
+<span style="width:100%;clear:both;"><a id="resultsListSkipNav" name="resultsListSkipNav"></a></span>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td align="center" class="tenpix paddingtop" style="border-top: 1px solid #ccc;">
+
+
+
+
+
+
+<table width="100%" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td width="10" rowspan="4" align="center"><img src="images/s.gif" width="10" height="10" alt="" /></td>
+<td colspan="2" align="center"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+<td width="7" rowspan="4" align="center"><img src="images/s.gif" width="10" height="7" alt="" /></td>
+</tr>
+<tr>
+<td>
+<table id="searchDetails" role="complementary" width="100%" border="0" cellspacing="0" cellpadding="0">
+
+
+
+
+<tbody><tr>
+<td align="right" nowrap="nowrap" class="l3e" width="auto" style="font-weight: normal;font-size:8pt;;color: #666666;">Search Terms</td>
+<td width="10"><img src="images/s.gif" width="7" height="7" alt="" /></td>
+<td class="l3">[((bitcoin) and Date(geq(8/9/2017) and leq(9/8/2017)))]
+
+
+
+(571)
+
+
+
+
+
+
+
+
+
+<img src="images/s.gif" width="3" height="" alt="" />
+<a class="link1" href="javascript:viewSrchDtlsOpenPopUp();">
+View search details</a>
+<div id="genericErrorDiv" style="display: none;z-index: 2">
+<div id="genericErrorDivContent" style="font-family: Open Sans, Verdana,Arial,Helvetica,sans-serif;font-size: 8pt;">
+<h3 style="color:#903; font-family: Open Sans, Verdana,Arial,Helvetica,sans-serif;font-size: 8pt;">
+<strong>Search Details</strong></h3>
+
+
+<!--  <p id="errString" style="color:#666666;font-family:Verdana,Arial,Helvetica,sans-serif;font-size:8pt;">
+You searched for:
+((bitcoin) and Date(geq(8/9/2017) and leq(9/8/2017)))</p> -->
+
+
+
+<p id="errString" style="color:#666666;font-family: Open Sans,Verdana,Arial,Helvetica,sans-serif;font-size:8pt;">
+You searched for:
+((bitcoin) and Date(geq(8/9/2017) and leq(9/8/2017)))
+</p>
+
+
+
+
+
+<div class="errBtn">
+<a class="link1" href="javascript:viewSrchDtlsHidePopUp();">
+<img src="/lnacui2api/images/ButClose.gif?version=1515443602000" height="19" width="45" border="0" title="Close" alt="" />
+</a>
+</div>
+</div>
+</div>
+
+
+
+
+</td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+
+
+
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Source</td>
+<td><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3" valign="middle"><img src="/lnacui2api/images/IconInfo.gif?version=1515443602000" height="14" width="14" align="absmiddle" style="border:0;cursor:pointer;" title="Source Information" alt="Source Information" onclick="return openSourceInfoWindow('/lnacui2api/results/shared/sourceInfo.do?sourceName=Newspaper+Stories%2C+Combined+Papers&amp;sourceId=S_AC00NBGenSrch.0_8411')" /><img src="images/s.gif" width="4" height="7" alt="" />[Newspaper Stories, Combined Papers]</td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Show</td>
+<td><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3">List</td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Sort</td>
+<td><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3">Relevance</td>
+<td><img src="images/s.gif" width="7" height="7" alt="" /></td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Date/Time</td>
+<td width="10"><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3">March 10 2018 02:39:26</td>
+
+
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap" class="l3"><img src="images/s.gif" width="5" height="10" alt="" /></td>
+</tr>
+
+
+
+
+
+
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr>
+<td align="left" width="23%"></td>
+<td align="center">
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td>
+
+<table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" valign="middle"></td><td align="right"><a href="javascript:pagination('/lnacui2api/results/listview/listview.do?start=1');"><img src="images/IconPaginationFirst.gif" border="0" alt="View first document set" "="" title="View first document set" /></a><img src="images/s.gif" alt="" height="0" width="4" border="0" /><a href="javascript:pagination('/lnacui2api/results/listview/listview.do?start=451');"><img src="images/IconPaginationPrevious.gif" border="0" alt="View previous document set" "="" title="View previous document set" /></a></td><td align="right" valign="middle" class="l3"><img src="images/s.gif" alt="" width="3" height="16" border="0" /></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667566733;pagination('/lnacui2api/results/listview/listview.do?start=226');">10</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667566733;pagination('/lnacui2api/results/listview/listview.do?start=251');">11</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667566733;pagination('/lnacui2api/results/listview/listview.do?start=276');">12</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667566733;pagination('/lnacui2api/results/listview/listview.do?start=301');">13</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667566733;pagination('/lnacui2api/results/listview/listview.do?start=326');">14</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667566733;pagination('/lnacui2api/results/listview/listview.do?start=351');">15</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667566733;pagination('/lnacui2api/results/listview/listview.do?start=376');">16</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667566733;pagination('/lnacui2api/results/listview/listview.do?start=401');">17</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667566733;pagination('/lnacui2api/results/listview/listview.do?start=426');">18</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667566733;pagination('/lnacui2api/results/listview/listview.do?start=451');">19</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap=""> <span class="l3j">20</span></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667566733;pagination('/lnacui2api/results/listview/listview.do?start=501');">21</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667566733;pagination('/lnacui2api/results/listview/listview.do?start=526');">22</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1520667566733;pagination('/lnacui2api/results/listview/listview.do?start=551');">23</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="7" height="16" border="0" /></td><td align="right"><a href="javascript:rand=1520667566733;pagination('/lnacui2api/results/listview/listview.do?start=501');"><img src="images/IconPaginationNext.gif" border="0" alt="View next document set" "="" title="View next document set" /></a><img src="images/s.gif" alt="" height="0" width="4" border="0" /><a href="javascript:rand=1520667566733;pagination('/lnacui2api/results/listview/listview.do?start=551');"><img src="images/IconPaginationLast.gif" border="0" alt="View last document set" "="" title="View last document set" /></a></td></tr></tbody></table>
+
+
+</td>
+</tr>
+</tbody></table>
+
+</td>
+
+
+
+
+<td class="l3" align="right" nowrap="nowrap">
+<a class="link1" href="javascript:backToTopLink();">
+Back to Top</a>
+</td>
+
+
+
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td align="center"><img src="images/s.gif" width="10" height="10" alt="" /></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+<script>
+var viewSrchDetails_Overlay_Suptd = 'false';
+</script>
+
+</td>
+</tr>
+</tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript">
+function setParentAsTarget(hrefLink, framesetName) {
+try {
+if(parent.document.getElementById(framesetName)!= null) {
+hrefLink.target='_parent';
+}
+} catch (e) {
+}
+}
+
+function openTerms(anchor) {
+features = createWindowFeatures(800, 400, 9, 0, 0, 0, 1, 1);
+
+if (window.help &amp;&amp; !window.help.closed) {
+help.focus();
+}
+help=window.open(anchor.href, anchor.target, features);
+return false;
+}
+
+function openWindow(page, w, h){
+var popupWin = window.open(page, "popup", "width=" + w + ",height=" + h);
+return popupWin;
+}
+
+function openCopyright(anchor) {
+features = createWindowFeatures(620, 400, 5, 0, 0, 0, 1, 1);
+
+if (window.help &amp;&amp; !window.help.closed) {
+help.focus();
+}
+help=window.open(anchor.href, anchor.target, features);
+return false;
+}
+
+function openExternalLink(url){
+// Left aligned popup window
+var str_target = "_external";
+var int_winWidth  = 625;
+var int_winHeight = 460;
+var str_attribute = "top=0,left=0,toolbar=yes,scrollbars=yes,location=yes,resizable=yes,menubar=yes,width="+int_winWidth+",height="+int_winHeight;
+// Calls the popup window function
+var winVar = window.open(url,str_target,str_attribute);
+winVar.focus();
+}
+</script>
+<style>
+.cvdFooter {
+color: #333;
+font-size:7pt;
+border-top: 1px solid #CCC;
+margin-top:40px;
+}
+
+.logo {
+padding:10px;
+border-right:1px dotted #ccc;
+font-family:Open Sans,Verdana, Arial, Helvetica, sans-serif;
+}
+
+.footerPadding {
+padding:9px 10px 10px 10px;
+}
+
+.footerLink a:link, .footerLink a:visited, .footerLink a:active{
+font-size:7pt;
+color:#004b91 ;
+font-family:Open Sans,verdana;
+text-decoration: none;
+font-weight: normal;
+}
+
+.footerLink a:hover{
+text-decoration: underline;
+}
+
+.l3d{
+FONT-SIZE: 8pt;
+COLOR: #cccccc;
+}
+
+.copyright{
+font-size:7pt;
+color:#333 ;
+}
+
+
+.cvdFooter span, .cvdFooter label, .cvdFooter td, .cvdFooter th{
+font-family:Open Sans,verdana,arial,helvetica,sans-serif;
+}
+
+
+</style>
+
+
+
+<div id="cvdFooterDiv" class="cvdFooter" align="left">
+<table cellpadding="0" cellspacing="0" border="0" align="left" width="100%">
+
+<tbody><tr>
+
+
+
+
+
+<td align="left" valign="middle" width="130" class="logo">
+
+
+
+
+
+
+
+
+
+
+<img src="/lnacui2api/images/LexisNexisFooter.png?version=1515443602000" height="21" width="109" border="0" title="LexisNexis®" alt="LexisNexis®" />
+
+</td>
+
+
+
+
+<td align="left" class="footerPadding">
+<table cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0" border="0">
+<tbody><tr>
+<td class="footerLink"><a class="footerLink" href="http://www.lexisnexis.com/about/" onclick="return openTerms(this)">
+
+
+
+
+
+
+
+
+
+About LexisNexis®
+
+</a></td>
+
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+<td><span class="l3d">|</span></td>
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+<td class="footerLink"><a class="footerLink" href="auth/displayterms.do?content=GENERAL" onclick="return openTerms(this)">
+
+
+
+
+
+
+
+
+
+Terms &amp; Conditions
+
+</a></td>
+
+
+
+
+
+
+
+
+
+
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+<td><span class="l3d">|</span></td>
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+
+<td class="footerLink"><a class="footerLink" href="auth/myid.do" onclick="openWindow('/lnacui2api/auth/myid.do',290,140);return false;" target="_self">My ID</a></td>
+
+
+
+
+
+
+
+
+
+
+
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td align="left"><img src="images/s.gif" width="1" height="5" alt="" /></td>
+</tr>
+<tr>
+<td align="left"><span class="footerLink"><a class="footerLink" href="http://www.lexisnexis.com/terms/copyright.asp" onclick="return openCopyright(this)">Copyright ©</a></span>
+<span class="copyright">
+<script type="text/javascript">document.write(new Date().getFullYear());</script>2018</span><img height="1" src="images/s.gif" width="2" border="0" alt="" />
+<!-- Webstar 3559663 - Update Marketing Pop-up header and footer : Starts -->
+
+
+
+<span class="footerLink"><a class="footerLink" href="javascript:openExternalLink('http://www.lexisnexis.com')">
+
+
+
+
+
+
+
+
+
+
+LexisNexis®.
+
+ 
+</a></span>
+<span class="copyright">All rights reserved.</span>
+
+
+<!-- Webstar 3559663 - Update Marketing Pop-up header and footer : Ends -->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+
+
+<td width:="" style="width: 150px" ;="">
+<a href="http://www.relx.com" target="_blank" class="relx-logo"><img src="/lnacui2api/images/re-logo.png?version=1515443602000" height="20" width="123" border="0" title="RELX Group" alt="RELX Group" /></a>
+</td>
+
+
+</tr>
+</tbody></table>
+
+</div>
+
+
+
+
+
+
+</td>
+</tr>
+</tbody></table>
+
+
+ 
+</div><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google Translate" /></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;" /><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+
+
+
+
+
+
+
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"/></svg></div></div><iframe frameborder="0" class="goog-te-menu-frame skiptranslate" title="Language Translate Widget" style="visibility: visible; box-sizing: content-box; width: 977px; height: 263px; display: none;"></iframe><iframe frameborder="0" class="goog-te-menu-frame skiptranslate" title="Language Translate Widget" style="visibility: visible; box-sizing: content-box; width: 197px; height: 69px; display: none;"></iframe><div id="popupMask"></div><div id="popupContainer"><div id="popupInner"><div id="popupTitleBar"><div id="popupTitle"></div><div id="popupControls"></div></div></div></div></body></html>

@@ -1,0 +1,806 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" style="height: 100%;"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Language" content="en_US" /> 
+<meta http-equiv="expires" content="Wed, 28 Feb 2018 02:24:28 GMT" />
+<title>LexisNexis® Academic: Results</title>
+<base href="https://www.lexisnexis.com:443/lnacui2api/" />
+
+
+
+<script type="text/javascript">djConfig = {parseWidgets: false};</script>
+
+
+
+<link rel="stylesheet" type="text/css" href="stylesheets/asn_search.css" />
+<link rel="stylesheet" href="stylesheets/Global.css" type="text/css" />
+<link rel="stylesheet" href="stylesheets/Styles.css" type="text/css" />
+<link rel="stylesheet" href="stylesheets/subModal.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/subModal.css" />
+
+
+
+
+
+
+
+<script type="text/javascript" src="js/mynexis/subModalcommon.js?v=1515443602000"></script>
+
+<script type="text/javascript" src="js/mynexis/subModal.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/dojo/dojo.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/dojoSubmit.js?v=1515443602000"></script>
+<script language="javascript" type="text/javascript">
+dojo.require("dojo.event.*");
+dojo.require("dojo.io.*");
+</script>
+
+<script type="text/javascript" src="js/results/resultsInclude.js?v=1515443602000"></script>
+<!-- Megha : focus by date : starts -->
+<script type="text/javascript" src="/lnacui2api/djs/results/resultsDateValidations_en_US_enAcademic.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/mynexis/mynValidation.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/mynexis/myNexis.js?v=1515443602000"></script>
+<script type="text/javascript" src="dwr/interface/MyNexisManagerAjaxService.js?v=1515443602000"></script>
+<script type="text/javascript" src="dwr/engine.js?v=1515443602000"></script>
+<script type="text/javascript" src="dwr/util.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/UXFramework20070309.js?v=1515443602000"></script>
+
+
+<script type="text/javascript" src="/lnacui2api/djs/results/results_en_US_enAcademic.js?v=1515443602000"></script>
+
+
+<script type="text/javascript" src="/lnacui2api/djs/results/results1_en_US_enAcademic.js?v=1515443602000"></script>
+<script type="text/javascript" src="/lnacui2api/djs/results/results2_en_US_enAcademic.js?v=1515443602000"></script>
+<script type="text/javascript" src="js/common.js?v=1515443602000"></script>
+
+
+
+
+
+
+
+
+<style type="text/css">
+a:visited {
+color: #8f2b8c;
+}
+
+</style>
+<script language="javascript" type="text/javascript">
+function backToTopLink() {
+location.hash = 'top';
+}
+function hideDiv(viewMultilk) {
+if(viewMultilk==true)
+{
+document.getElementById("classOuterDiv").style.display='none';
+
+}
+}
+
+function hideLafnMessage() {
+document.getElementById("lafnContinueMsg").style.display='none';
+}
+
+
+// RAP Webstar fix 2461713 for Dec 2008 - Suman_Majumder: Start
+function reloadClassification(sortChange) {
+var tempVar = sortChange;
+if(tempVar == 'true') {
+setTimeout("changeClassificationOption()", 500);
+}
+}
+// RAP Webstar fix 2461713 for Dec 2008 - Suman_Majumder: End
+
+</script>
+
+
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css" /><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/translate_static/js/element/main.js"></script><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/element/TE_20170911_00/e/js/element/element_main.js"></script></head>
+
+<body bgcolor="#FFFFFF" style="margin: 0px; position: relative; min-height: 100%; top: 40px;" onload="hideDiv(true);initBoxes('listview');callSubScroll('frm_tagged_documents',0,101);updateResultsNav();reloadClassification('false');scrollToHitPos('false');" onclick="storeScrollToHitPos('false');"><div class="skiptranslate" style=""><iframe id=":1.container" class="goog-te-banner-frame skiptranslate" frameborder="0" src="javascript:''" style="visibility:visible"></iframe></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="classOuterDiv" style="display: none; background-color: white; background: white; overflow: auto; z-index: 1; z-index: 10; margin-left: 0; margin-right: 0; margin-bottom: 0">
+</div>
+
+
+<div id="classInnerDiv" style="margin: 0px"><a name="top"></a>
+
+
+
+
+
+<a href="javascript:scrollToSkipLink('resultsListSkipNav');"><img src="images/s.gif" width="1" height="1" border="0" alt="Skip to end of result list" /></a><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td><form name="results_listview_ResultsListForm" method="post" action="/lnacui2api/results/listview/listview.do">
+<input type="hidden" name="risb" value="21_T27224411563" />
+<input type="hidden" name="formatType" value="LIST" />
+<input type="hidden" name="resultsRisbId" value="21_T27224411563" />
+<input type="hidden" name="sortId" value="RELEVANCE" />
+<input type="hidden" name="test" value="results/listview/listview.do" />
+<input type="hidden" name="fullPageURI" value="LIST" />
+<input type="hidden" name="contFrmReloaded" value="false" />
+<input type="hidden" name="cutomLink" value="/lnacui2api/results/shared/exitLinks.do?utilityLinkDispatch=results_docview_CustomSegRenderer&amp;pageOrigin=results_listview_Listview&amp;formStateKey=29_T27224411567" />
+<input type="hidden" name="reloadPage" />
+<input type="hidden" name="exitKey" value="29_T27224411567" />
+<input type="hidden" name="returnToKey" value="20_T27224411590" />
+<input type="hidden" id="startDocNumber" value="101" />
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tbody><tr>
+<td align="center" class="l3"><b> 
+
+
+
+
+
+Selected Group:<img src="images/s.gif" width="7" height="1" alt="" />
+Newspapers
+
+ </b> <img src="images/s.gif" width="5" height="1" alt="" /> (<a class="rslink" href="" onclick="return viewAllResults()"> View All Results</a>) </td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+
+
+
+<table>
+<tbody><tr><td>
+<div>
+<span id="google_translate_element" style="padding-left: 9px;float:left;margin-bottom: 1px;"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage"><select class="goog-te-combo"><option value="">Select Language</option><option value="en">English</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="am">Amharic</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="az">Azerbaijani</option><option value="eu">Basque</option><option value="be">Belarusian</option><option value="bn">Bengali</option><option value="bs">Bosnian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="co">Corsican</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="fy">Frisian</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="ha">Hausa</option><option value="haw">Hawaiian</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kn">Kannada</option><option value="kk">Kazakh</option><option value="km">Khmer</option><option value="ko">Korean</option><option value="ku">Kurdish (Kurmanji)</option><option value="ky">Kyrgyz</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="lb">Luxembourgish</option><option value="mk">Macedonian</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="ne">Nepali</option><option value="no">Norwegian</option><option value="ps">Pashto</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="pa">Punjabi</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sm">Samoan</option><option value="gd">Scots Gaelic</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="sn">Shona</option><option value="sd">Sindhi</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="tg">Tajik</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="uz">Uzbek</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option><option value="xh">Xhosa</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="zu">Zulu</option></select></div>Powered by <span style="white-space:nowrap"><a class="goog-logo-link" href="https://translate.google.com" target="_blank"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Translate" />Translate</a></span></div></span>
+
+<span style="float:left; margin-top:5px;display: none;" id="showOrigBut">
+<img src="/lnacui2api/images/ButShowOriginalEnglish.gif?version=1515443602000" height="19" width="99" border="0" title="Show Original" alt="" onclick="javascript:showOriginal();" />
+</span>
+
+
+<span class="notranslate">
+<a class="whats-link" target="_self" onclick="javascript:openDisclaimerText('This is a hyperlink provided for your convenience. Translations which you request are provided by Google Translate. LexisNexis is not responsible for (and makes no warranty with respect to) the accuracy, adequacy, reliability or completeness of any translations and disclaims all liability, loss and damage of any nature arising in connection with translations. By use of this hyperlink to obtain a translation you confirm your agreement to the foregoing.');return false;" href="">Disclaimer</a>
+</span>
+
+</div>
+</td></tr></tbody></table>
+<script>
+var myVar;
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({
+pageLanguage: 'auto'
+}, 'google_translate_element');
+
+myVar=setInterval(function(){chkGoogle()},1000);
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+
+<doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><doc></doc><table width="100%" border="0" cellspacing="0" cellpadding="0" role="main">
+
+
+
+
+<tbody><tr class="nopadding">
+<td><a name="DOCNO_1"></a></td>
+</tr>
+<tr valign="baseline" height="8" class="toprow"><th width="6%" align="left" valign="center" nowrap="nowrap"><span><input type="checkbox" id="frm_control_box" title="Click here to select or de-select all" name="frm_control_box" value="checkbox" onclick="javascript:subSetAllSelectionStatus()" /></span></th><th width="94%" align="left" valign="center" nowrap="nowrap"><span>Results</span></th></tr><tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('145')" type="checkbox" value="145" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents101" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents101">101.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=247189&amp;docNo=101" target="_parent">U.S. SEEKS TO FINE MICROSOFT / FIRM IS SAID TO BE USING ILLEGAL TACTIC</a><br class="br" /><span class="notranslate">The Philadelphia Inquirer</span>, OCTOBER 21, 1997 Tuesday SF EDITION, NATIONAL; Pg. A01, 881 words, Rory J. O'Connor, INQUIRER WASHINGTON BUREAU, This article contains information from Reuters news service.</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_2"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('148')" type="checkbox" value="148" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents102" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents102">102.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=8213&amp;docNo=102" target="_parent">Justice faces ambiguity in proving Microsoft collusion</a><br class="br" /><span class="notranslate">USA TODAY</span>, October 26, 1998, Monday,, 679 words, Paul Davidson</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_3"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('151')" type="checkbox" value="151" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents103" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents103">103.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=8213&amp;docNo=103" target="_parent">At halftime, Microsoft looks behind on points How will the trial swing?</a><br class="br" /><span class="notranslate">USA TODAY</span>, December 30, 1998, Wednesday,, 1496 words, Paul Davidson</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_4"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('152')" type="checkbox" value="152" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents104" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents104">104.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=8213&amp;docNo=104" target="_parent">Apple to say Microsoft made threats</a><br class="br" /><span class="notranslate">USA TODAY</span>, October 30, 1998, Friday,, 354 words, Paul Davidson; Doug Levy</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_5"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('153')" type="checkbox" value="153" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents105" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents105">105.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=6742&amp;docNo=105" target="_parent">Microsoft Digs In Against a 'Poorly Informed' U.S.</a><br class="br" /><span class="notranslate">The New York Times</span>, December 24, 1997, Wednesday, Late Edition - Final, Section D; Page 1; Column 2; Business/Financial Desk , 1040 words, By STEVE LOHR </td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_6"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('154')" type="checkbox" value="154" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents106" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents106">106.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=8213&amp;docNo=106" target="_parent">Cracking down on mighty MICROSOFT Microsoft defends actions but may face $1 million-a-day fine</a><br class="br" /><span class="notranslate">USA TODAY</span>, October 21, 1997, Tuesday,, 1485 words, James Kim; Jayne O'Donnell</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_7"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('155')" type="checkbox" value="155" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents107" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents107">107.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=8213&amp;docNo=107" target="_parent">Software giant hit by suit / Microsoft vows to fight for Intuit</a><br class="br" /><span class="notranslate">USA TODAY</span>, April 28, 1995, Friday, FINAL EDITION, 1416 words, James Kim</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_8"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('156')" type="checkbox" value="156" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents108" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents108">108.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=397229&amp;docNo=108" target="_parent">The talk of the online crowd: On the Net, rich-and-powerful Bill Gates is just a guy to kick around</a><br class="br" /><span class="notranslate">The Gazette (Montreal, Quebec)</span>, October 22, 1997, Wednesday, FINAL EDITION, BUSINESS; SITE SEEING; Pg. D1 / BREAK, 809 words, ANDY RIGA; THE GAZETTE</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_9"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('157')" type="checkbox" value="157" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents109" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents109">109.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=11810&amp;docNo=109" target="_parent">MICROSOFT ASKS JUDGE TO DISMISS GOVERNMENT'S BREAKUP REQUEST; IN A FORMAL REPLY, COMPANY SAYS THE PROPOSAL IS A "RADICAL STEP"; STOCK FLIRTS WITH 52-WEEK LOW</a><br class="br" /><span class="notranslate">St. Louis Post-Dispatch (Missouri)</span>, May 11, 2000, Thursday, FIVE STAR LIFT EDITION, BUSINESS, Pg. C1, 813 words, Michael J. Martinez; AP Business Writer</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_10"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('158')" type="checkbox" value="158" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents110" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents110">110.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=6742&amp;docNo=110" target="_parent">Citing Abuse, Microsoft Sues U.S. About Its New Network</a><br class="br" /><span class="notranslate">The New York Times</span>, June 27, 1995, Tuesday, Late Edition - Final, Section D;   Page 4;   Column 5;   Business/Financial Desk  , 654 words, By STEVE LOHR  </td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_11"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('159')" type="checkbox" value="159" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents111" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents111">111.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=313960&amp;docNo=111" target="_parent">Microsoft entering new stage with Apple; BUT WATCHERS ARE QUESTIONING ITS COMMITMENT</a><br class="br" /><span class="notranslate">San Jose Mercury News (California)</span>, April 11, 2002 Thursday MO1 EDITION, BU; Pg. 3, 625 words, Jon Fortt Mercury News</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_12"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('160')" type="checkbox" value="160" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents112" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents112">112.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=397186&amp;docNo=112" target="_parent">Microsoft moves to eclipse Sun Java: Hobbling rival comes on eve of antitrust hearings</a><br class="br" /><span class="notranslate">Edmonton Journal (Alberta)</span>, June 20, 2002 Thursday Final Edition, Business; Pg. G8, 407 words</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_13"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('161')" type="checkbox" value="161" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents113" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents113">113.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=11810&amp;docNo=113" target="_parent">CHALLENGING MICROSOFT'S MONOPOLY</a><br class="br" /><span class="notranslate">St. Louis Post-Dispatch (Missouri)</span>, May 1, 1998, Friday, FIVE STAR LIFT EDITION, EDITORIAL, Pg. B6, 556 words</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_14"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('162')" type="checkbox" value="162" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents114" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents114">114.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=8075&amp;docNo=114" target="_parent"><span class="notranslate">The Washington Post</span></a>, The Giant Many Love To Hate; Anti-Microsoft Sentiment Is Broad, Often Offensive, William Casey , Washington Post Staff Writer, June 10, 1996, Monday, Final Edition, FINANCIAL; Pg. F15; CYBERTALK, 859 words</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_15"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('163')" type="checkbox" value="163" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents115" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents115">115.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=314237&amp;docNo=115" target="_parent">The search for meaning;  Industry</a><br class="br" /><span class="notranslate">Sydney Morning Herald (Australia)</span>, December 15, 1998 Tuesday, COMPUTERS; Information Technology; Pg. 11, 776 words, STEVE LOHR and JOEL BRINKLEY</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_16"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('164')" type="checkbox" value="164" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents116" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents116">116.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=8204&amp;docNo=116" target="_parent">Is Microsoft's Corporate Culture Losing Trial?</a><br class="br" /><span class="notranslate">Investor's Business Daily</span>, February 18, 1999, Computers &amp; Technology; Pg. A6, 1085 words, By Lisa Wirthman, Investor's Business Daily</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_17"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('165')" type="checkbox" value="165" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents117" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents117">117.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=8213&amp;docNo=117" target="_parent">Sun-Microsoft rivalry one of dislike, distrust</a><br class="br" /><span class="notranslate">USA TODAY</span>, November 9, 1998, Monday,, 1051 words, Kevin Maney</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_18"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('166')" type="checkbox" value="166" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents118" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents118">118.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=8204&amp;docNo=118" target="_parent">Microsoft Legal Settlements Could Ease Path In Key Europe Case; Will Pay Rival Novell $536 Mil; Litigation-magnet company also ends fight with a trade group that long opposed it</a><br class="br" /><span class="notranslate">Investor's Business Daily</span>, November 9, 2004 Tuesday, SECTION INTERNET &amp; TECHNOLOGY; NATIONAL EDITION; Pg. A04, 746 words, BY PATRICK SEITZ</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_19"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('167')" type="checkbox" value="167" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents119" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents119">119.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=6742&amp;docNo=119" target="_parent">Microsoft Weighs Options And Keeps Its Cards Close</a><br class="br" /><span class="notranslate">The New York Times</span>, February 13, 2004 Friday, Section C; Column 5; Business/Financial Desk; Pg. 4; BIDDING FOR DISNEY: THE STAKEHOLDER, 812 words, By STEVE LOHR</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_20"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('168')" type="checkbox" value="168" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents120" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents120">120.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=8357&amp;docNo=120" target="_parent">Skype's interests may play second fiddle in Microsoft deal;  Internet calling service and software for phone providers may clash</a><br class="br" /><span class="notranslate">The International Herald Tribune</span>, June 6, 2011 Monday, FINANCE; Pg. 2, 1101 words, BY KEVIN J. O'BRIEN</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_21"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('169')" type="checkbox" value="169" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents121" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents121">121.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=313960&amp;docNo=121" target="_parent">MICROSOFT WEB SITES DISABLED BY ERROR OUTAGE UNDERMINES NEW AD CAMPAIGN</a><br class="br" /><span class="notranslate">San Jose Mercury News (California)</span>, January 25, 2001 Thursday MORNING FINAL EDITION, FRONT; Pg. 1A, 798 words, KRISTI HEIM, Mercury News Seattle Bureau</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_22"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('170')" type="checkbox" value="170" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents122" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents122">122.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=222278&amp;docNo=122" target="_parent">MICROSOFT RIVALS PUSH FOR EVEN STRICTER CURBS ON WINDOWS</a><br class="br" /><span class="notranslate">The Business</span>, March 28, 2004, Pg. 8, 1017 words, Tony Glover;</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_23"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('171')" type="checkbox" value="171" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents123" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents123">123.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=313960&amp;docNo=123" target="_parent">MICROSOFT WITNESS LIST HAS SOME SURPRISES</a><br class="br" /><span class="notranslate">San Jose Mercury News (California)</span>, September 5, 1998 Saturday MORNING FINAL EDITION Correction Appended, FRONT; Pg. 1A, 955 words, MIGUEL HELFT AND SCOTT HERHOLD, Mercury News Staff Writers</td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_24"></a></td>
+</tr>
+<tr class="shaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('173')" type="checkbox" value="173" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents124" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents124">124.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=6742&amp;docNo=124" target="_parent">Prosecution Almost Rests in the Microsoft Trial</a><br class="br" /><span class="notranslate">The New York Times</span>, January 8, 1999, Friday, Late Edition - Final, Section C; Page 1; Column 2; Business/Financial Desk , 1632 words, By STEVE LOHR </td></tr>
+
+<tr class="nopadding">
+<td><a name="DOCNO_25"></a></td>
+</tr>
+<tr class="noshaderow1st" height="8" valign="baseline"><td width="6%" align="left" nowrap="nowrap" valign="top" style="padding-bottom: 8px;"><input onclick="javascript:manageBox('174')" type="checkbox" value="174" name="frm_tagged_documents" title="Click here to deliver or to view tagged documents" id="frm_tagged_documents125" /><label style="{cursor: pointer; cursor: hand;}" for="frm_tagged_documents125">125.</label></td><td width="94%" align="left" valign="top" style="padding-bottom: 8px;"><a href="/lnacui2api/results/docview/docview.do?docLinkInd=true&amp;risb=21_T27224411563&amp;format=GNBFI&amp;sort=RELEVANCE&amp;startDocNo=101&amp;resultsUrlKey=29_T27224411567&amp;cisb=22_T27224411566&amp;treeMax=true&amp;treeWidth=0&amp;csi=313958&amp;docNo=125" target="_parent">U.S. HOLDS FIRM ON PLAN FOR BREAKUP; GOVERNMENT ACCEPTS ONLY MINOR MODIFICATIONS FROM MICROSOFT, BUT IS INSISTENT ON THE THRUST OF ITS PROPOSAL</a><br class="br" /><span class="notranslate">Contra Costa Times (California)</span>, June 6, 2000 Tuesday FINAL EDITION, BUSINESS; Pg. B01, 696 words, Joel Brinkley</td></tr>
+
+</tbody></table>
+</form>
+
+
+</td>
+</tr>
+</tbody></table>
+
+
+
+
+<span style="width:100%;clear:both;"><a id="resultsListSkipNav" name="resultsListSkipNav"></a></span>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td align="center" class="tenpix paddingtop" style="border-top: 1px solid #ccc;">
+
+
+
+
+
+
+<table width="100%" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td width="10" rowspan="4" align="center"><img src="images/s.gif" width="10" height="10" alt="" /></td>
+<td colspan="2" align="center"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+<td width="7" rowspan="4" align="center"><img src="images/s.gif" width="10" height="7" alt="" /></td>
+</tr>
+<tr>
+<td>
+<table id="searchDetails" role="complementary" width="100%" border="0" cellspacing="0" cellpadding="0">
+
+
+
+
+<tbody><tr>
+<td align="right" nowrap="nowrap" class="l3e" width="auto" style="font-weight: normal;font-size:8pt;;color: #666666;">Search Terms</td>
+<td width="10"><img src="images/s.gif" width="7" height="7" alt="" /></td>
+<td class="l3">[(Microsoft)]
+
+
+
+(685)
+
+
+
+
+
+
+
+
+
+<img src="images/s.gif" width="3" height="" alt="" />
+<a class="link1" href="javascript:viewSrchDtlsOpenPopUp();">
+View search details</a>
+<div id="genericErrorDiv" style="display: none;z-index: 2">
+<div id="genericErrorDivContent" style="font-family: Open Sans, Verdana,Arial,Helvetica,sans-serif;font-size: 8pt;">
+<h3 style="color:#903; font-family: Open Sans, Verdana,Arial,Helvetica,sans-serif;font-size: 8pt;">
+<strong>Search Details</strong></h3>
+
+
+<!--  <p id="errString" style="color:#666666;font-family:Verdana,Arial,Helvetica,sans-serif;font-size:8pt;">
+You searched for:
+(Microsoft)</p> -->
+
+
+
+<p id="errString" style="color:#666666;font-family: Open Sans,Verdana,Arial,Helvetica,sans-serif;font-size:8pt;">
+You searched for:
+(Microsoft)
+</p>
+
+
+
+
+
+<div class="errBtn">
+<a class="link1" href="javascript:viewSrchDtlsHidePopUp();">
+<img src="/lnacui2api/images/ButClose.gif?version=1515443602000" height="19" width="45" border="0" title="Close" alt="" />
+</a>
+</div>
+</div>
+</div>
+
+
+
+
+</td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+
+
+
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Source</td>
+<td><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3" valign="middle"><img src="/lnacui2api/images/IconInfo.gif?version=1515443602000" height="14" width="14" align="absmiddle" style="border:0;cursor:pointer;" title="Source Information" alt="Source Information" onclick="return openSourceInfoWindow('/lnacui2api/results/shared/sourceInfo.do?sourceName=Company%2BProfiles%2Band%2BDirectories%2CUS%2BLaw%2BReviews%2Band%2BJournals%2C%2BCombined%2CFederal%2B%26%2BState%2BCourt%2BCases%2B-%2BAfter%2B1944%2C%2BCombined%2CNewspaper%2BStories%2C%2BCombined%2BPapers&amp;csi=0&amp;sourceId=S_AC00NBGenSrch.0_270944%2CS_AC00NBGenSrch.0_270077%2CS_AC00NBGenSrch.0_11059%2CS_AC00NBGenSrch.0_8411')" /><img src="images/s.gif" width="4" height="7" alt="" />[Company Profiles and Directories;US Law Reviews and Journals, Combined;Federal &amp; State Court Cases - After 1944, Combined;Newspaper Stories, Combined Papers]</td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Show</td>
+<td><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3">List</td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Sort</td>
+<td><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3">Relevance</td>
+<td><img src="images/s.gif" width="7" height="7" alt="" /></td>
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap"><img src="images/s.gif" width="7" height="10" alt="" /></td>
+</tr>
+
+
+<tr>
+<td align="right" nowrap="nowrap" class="l3e" width="5%" style="font-weight: normal;font-size: 8pt;;color: #666666;">Date/Time</td>
+<td width="10"><img src="images/s.gif" width="10" height="7" alt="" /></td>
+<td class="l3">February 27 2018 21:14:28</td>
+
+
+</tr>
+<tr>
+<td colspan="4" nowrap="nowrap" class="l3"><img src="images/s.gif" width="5" height="10" alt="" /></td>
+</tr>
+
+
+
+
+
+
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr>
+<td align="left" width="23%"></td>
+<td align="center">
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td>
+
+<table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" valign="middle"></td><td align="right"><a href="javascript:pagination('/lnacui2api/results/listview/listview.do?start=1');"><img src="images/IconPaginationFirst.gif" border="0" alt="View first document set" "="" title="View first document set" /></a><img src="images/s.gif" alt="" height="0" width="4" border="0" /><a href="javascript:pagination('/lnacui2api/results/listview/listview.do?start=76');"><img src="images/IconPaginationPrevious.gif" border="0" alt="View previous document set" "="" title="View previous document set" /></a></td><td align="right" valign="middle" class="l3"><img src="images/s.gif" alt="" width="3" height="16" border="0" /></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1519784068486;pagination('/lnacui2api/results/listview/listview.do?start=1');">1</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1519784068486;pagination('/lnacui2api/results/listview/listview.do?start=26');">2</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1519784068486;pagination('/lnacui2api/results/listview/listview.do?start=51');">3</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1519784068486;pagination('/lnacui2api/results/listview/listview.do?start=76');">4</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap=""> <span class="l3j">5</span></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1519784068486;pagination('/lnacui2api/results/listview/listview.do?start=126');">6</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1519784068486;pagination('/lnacui2api/results/listview/listview.do?start=151');">7</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1519784068486;pagination('/lnacui2api/results/listview/listview.do?start=176');">8</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1519784068486;pagination('/lnacui2api/results/listview/listview.do?start=201');">9</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1519784068486;pagination('/lnacui2api/results/listview/listview.do?start=226');">10</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1519784068486;pagination('/lnacui2api/results/listview/listview.do?start=251');">11</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1519784068486;pagination('/lnacui2api/results/listview/listview.do?start=276');">12</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1519784068486;pagination('/lnacui2api/results/listview/listview.do?start=301');">13</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="4" height="16" border="0" /></td><td align="center" valign="middle" height="14" nowrap="" class="l3"><a href="javascript:rand=1519784068486;pagination('/lnacui2api/results/listview/listview.do?start=326');">14</a></td><td align="center" valign="middle"><img src="images/s.gif" alt="" width="7" height="16" border="0" /></td><td align="right"><a href="javascript:rand=1519784068486;pagination('/lnacui2api/results/listview/listview.do?start=126');"><img src="images/IconPaginationNext.gif" border="0" alt="View next document set" "="" title="View next document set" /></a><img src="images/s.gif" alt="" height="0" width="4" border="0" /><a href="javascript:rand=1519784068486;pagination('/lnacui2api/results/listview/listview.do?start=676');"><img src="images/IconPaginationLast.gif" border="0" alt="View last document set" "="" title="View last document set" /></a></td></tr></tbody></table>
+
+
+</td>
+</tr>
+</tbody></table>
+
+</td>
+
+
+
+
+<td class="l3" align="right" nowrap="nowrap">
+<a class="link1" href="javascript:backToTopLink();">
+Back to Top</a>
+</td>
+
+
+
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td align="center"><img src="images/s.gif" width="10" height="10" alt="" /></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+<script>
+var viewSrchDetails_Overlay_Suptd = 'false';
+</script>
+
+</td>
+</tr>
+</tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript">
+function setParentAsTarget(hrefLink, framesetName) {
+try {
+if(parent.document.getElementById(framesetName)!= null) {
+hrefLink.target='_parent';
+}
+} catch (e) {
+}
+}
+
+function openTerms(anchor) {
+features = createWindowFeatures(800, 400, 9, 0, 0, 0, 1, 1);
+
+if (window.help &amp;&amp; !window.help.closed) {
+help.focus();
+}
+help=window.open(anchor.href, anchor.target, features);
+return false;
+}
+
+function openWindow(page, w, h){
+var popupWin = window.open(page, "popup", "width=" + w + ",height=" + h);
+return popupWin;
+}
+
+function openCopyright(anchor) {
+features = createWindowFeatures(620, 400, 5, 0, 0, 0, 1, 1);
+
+if (window.help &amp;&amp; !window.help.closed) {
+help.focus();
+}
+help=window.open(anchor.href, anchor.target, features);
+return false;
+}
+
+function openExternalLink(url){
+// Left aligned popup window
+var str_target = "_external";
+var int_winWidth  = 625;
+var int_winHeight = 460;
+var str_attribute = "top=0,left=0,toolbar=yes,scrollbars=yes,location=yes,resizable=yes,menubar=yes,width="+int_winWidth+",height="+int_winHeight;
+// Calls the popup window function
+var winVar = window.open(url,str_target,str_attribute);
+winVar.focus();
+}
+</script>
+<style>
+.cvdFooter {
+color: #333;
+font-size:7pt;
+border-top: 1px solid #CCC;
+margin-top:40px;
+}
+
+.logo {
+padding:10px;
+border-right:1px dotted #ccc;
+font-family:Open Sans,Verdana, Arial, Helvetica, sans-serif;
+}
+
+.footerPadding {
+padding:9px 10px 10px 10px;
+}
+
+.footerLink a:link, .footerLink a:visited, .footerLink a:active{
+font-size:7pt;
+color:#004b91 ;
+font-family:Open Sans,verdana;
+text-decoration: none;
+font-weight: normal;
+}
+
+.footerLink a:hover{
+text-decoration: underline;
+}
+
+.l3d{
+FONT-SIZE: 8pt;
+COLOR: #cccccc;
+}
+
+.copyright{
+font-size:7pt;
+color:#333 ;
+}
+
+
+.cvdFooter span, .cvdFooter label, .cvdFooter td, .cvdFooter th{
+font-family:Open Sans,verdana,arial,helvetica,sans-serif;
+}
+
+
+</style>
+
+
+
+<div id="cvdFooterDiv" class="cvdFooter" align="left">
+<table cellpadding="0" cellspacing="0" border="0" align="left" width="100%">
+
+<tbody><tr>
+
+
+
+
+
+<td align="left" valign="middle" width="130" class="logo">
+
+
+
+
+
+
+
+
+
+
+<img src="/lnacui2api/images/LexisNexisFooter.png?version=1515443602000" height="21" width="109" border="0" title="LexisNexis®" alt="LexisNexis®" />
+
+</td>
+
+
+
+
+<td align="left" class="footerPadding">
+<table cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0" border="0">
+<tbody><tr>
+<td class="footerLink"><a class="footerLink" href="http://www.lexisnexis.com/about/" onclick="return openTerms(this)">
+
+
+
+
+
+
+
+
+
+About LexisNexis®
+
+</a></td>
+
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+<td><span class="l3d">|</span></td>
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+<td class="footerLink"><a class="footerLink" href="auth/displayterms.do?content=GENERAL" onclick="return openTerms(this)">
+
+
+
+
+
+
+
+
+
+Terms &amp; Conditions
+
+</a></td>
+
+
+
+
+
+
+
+
+
+
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+<td><span class="l3d">|</span></td>
+<td><img height="5" src="images/s.gif" width="4" border="0" alt="" /></td>
+
+<td class="footerLink"><a class="footerLink" href="auth/myid.do" onclick="openWindow('/lnacui2api/auth/myid.do',290,140);return false;" target="_self">My ID</a></td>
+
+
+
+
+
+
+
+
+
+
+
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td align="left"><img src="images/s.gif" width="1" height="5" alt="" /></td>
+</tr>
+<tr>
+<td align="left"><span class="footerLink"><a class="footerLink" href="http://www.lexisnexis.com/terms/copyright.asp" onclick="return openCopyright(this)">Copyright ©</a></span>
+<span class="copyright">
+<script type="text/javascript">document.write(new Date().getFullYear());</script>2018</span><img height="1" src="images/s.gif" width="2" border="0" alt="" />
+<!-- Webstar 3559663 - Update Marketing Pop-up header and footer : Starts -->
+
+
+
+<span class="footerLink"><a class="footerLink" href="javascript:openExternalLink('http://www.lexisnexis.com')">
+
+
+
+
+
+
+
+
+
+
+LexisNexis®.
+
+ 
+</a></span>
+<span class="copyright">All rights reserved.</span>
+
+
+<!-- Webstar 3559663 - Update Marketing Pop-up header and footer : Ends -->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+
+
+<td width:="" style="width: 150px" ;="">
+<a href="http://www.relx.com" target="_blank" class="relx-logo"><img src="/lnacui2api/images/re-logo.png?version=1515443602000" height="20" width="123" border="0" title="RELX Group" alt="RELX Group" /></a>
+</td>
+
+
+</tr>
+</tbody></table>
+
+</div>
+
+
+
+
+
+
+</td>
+</tr>
+</tbody></table>
+
+
+ 
+</div>
+
+
+
+
+
+
+
+
+
+<div id="popupMask"></div><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google Translate" /></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;" /><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div><div id="popupContainer"><div id="popupInner"><div id="popupTitleBar"><div id="popupTitle"></div><div id="popupControls"></div></div></div></div><div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"/></svg></div></div><iframe frameborder="0" class="goog-te-menu-frame skiptranslate" title="Language Translate Widget" style="visibility: visible; box-sizing: content-box; width: 977px; height: 263px; display: none;"></iframe><iframe frameborder="0" class="goog-te-menu-frame skiptranslate" title="Language Translate Widget" style="visibility: visible; box-sizing: content-box; width: 197px; height: 69px; display: none;"></iframe></body></html>
