@@ -12,6 +12,9 @@ from sklearn.decomposition import TruncatedSVD
 from sklearn.model_selection import ParameterGrid
 from joblib import Parallel, delayed
 import math
+from sklearn.metrics import confusion_matrix, f1_score, accuracy_score, precision_score, recall_score
+import pandas as pd
+import sqlite3
 
 
 def get_out_headline_data():
@@ -53,10 +56,11 @@ def predict(train_headlines, train_trend, test_headlines, test_trend,
             random_state=42, return_df=True):
     text_clf_svm = Pipeline([
         #    ('vect', CountVectorizer(min_df=0.031, max_df=0.2, max_features=200000, ngram_range=(2, 2))),
-        # ('vect', CountVectorizer()),
-        # ('tfidf', TfidfTransformer()),
-        ('tfidf-vect', text.TfidfVectorizer(min_df=min_df, max_df=max_df, stop_words=stop_words,
-                                            use_idf=use_idf, norm=tfidf_norm, ngram_range=ngram_range)),
+        ('vect', CountVectorizer(min_df=min_df, max_df=max_df, stop_words=stop_words,
+                                 ngram_range=ngram_range)),
+        ('tfidf', TfidfTransformer(norm=tfidf_norm, use_idf=use_idf)),
+        # ('tfidf-vect', text.TfidfVectorizer(min_df=min_df, max_df=max_df, stop_words=stop_words,
+        #                                     use_idf=use_idf, norm=tfidf_norm, ngram_range=ngram_range)),
         # ('svd', TruncatedSVD(7)),
         ('clf-svm', SGDClassifier(loss=sgd_loss, penalty=sgd_penalty,
                                   alpha=alpha, max_iter=max_iter, random_state=random_state)),
@@ -73,7 +77,7 @@ def predict(train_headlines, train_trend, test_headlines, test_trend,
     # print('Accuracy:', accuracy)
     # text_clf_svm.get_params()['clf-svm'].coef_
 
-    words = text_clf_svm.get_params()['tfidf-vect'].get_feature_names()
+    words = text_clf_svm.get_params()['vect'].get_feature_names()
     if 'svd' in text_clf_svm.get_params():
         weights = text_clf_svm.get_params()['svd'].inverse_transform(
             text_clf_svm.get_params()['clf-svm'].coef_[0].reshape(1, -1))[0]
@@ -83,16 +87,32 @@ def predict(train_headlines, train_trend, test_headlines, test_trend,
     df = pd.DataFrame(list(zip(words,
                                weights)))
     if return_df:
+        print('Confusion matrix:')
+        print(confusion_matrix(test_trend, predicted_svm))
+        print('Accuracy:', accuracy_score(test_trend, predicted_svm))
+        print('Precision score:', precision_score(test_trend, predicted_svm))
+        print('Recall score:', recall_score(test_trend, predicted_svm))
+        print('F1_score:', f1_score(test_trend, predicted_svm))
         return accuracy, df
     else:
         return accuracy
 
 
-def run():
+def run(query='trump'):
     split = 0.8
     # (data, train, test) = get_out_headline_data()
-    data = pd.read_csv('title_trend.tsv', '\t').sort_values('date')
-    data = data[data['date'] > '2005-07-01']
+    # data = pd.read_csv('title_trend.tsv', '\t', encoding='utf8').sort_values('date')
+    data = pd.read_sql('''
+select article.date, article.title, case when trend.trend = 0 then -1 else 1 end as trend from article 
+join trend join (select search_range, cast(max(page_num) * 0.7 as int) as last_page from article
+where query = "microsoft"
+group by search_range) as t1
+on trend.input_filename = "MSFT.csv" 
+and article.date = trend.date 
+and article.sentiment = trend.trend
+and t1.search_range = article.search_range
+where query = "microsoft" and article.page_num < t1.last_page
+and article.page_num < 10''', sqlite3.connect('articles.db'))
     train = data.iloc[:math.floor(len(data) * split)]
     test = data.iloc[math.floor(len(data) * split):]
     # train = data[data['date'] < '2018-02-01']
@@ -106,17 +126,34 @@ def run():
     print(f'Num testing headlines: {len(test_headlines)}')
     print(f'{int(len(train_headlines)/len(data)*100)}% train / {int(len(test_headlines)/len(data)*100)}% test')
 
-    new_stopwords = set(ENGLISH_STOP_WORDS).union({'microsoft'})
+    new_stopwords = set(ENGLISH_STOP_WORDS).union({query, query + 's'})
 
-    # accuracy, df, best_params = grid_search(train_headlines, train_trend, test_headlines, test_trend,
-    #                                         stop_words=new_stopwords)
+    accuracy, df, best_params = grid_search(train_headlines, train_trend, test_headlines, test_trend,
+                                            stop_words=new_stopwords)
 
-    params = dict(
-        {'alpha': 0.000630957344480193, 'max_df': 0.16509636244473133, 'max_iter': 5, 'min_df': 0.01,
-         'ngram_range': (1, 2), 'random_state': 43, 'sgd_loss': 'hinge', 'sgd_penalty': 'l1', 'tfidf_norm': 'l1',
-         'use_idf': True})
-    accuracy, df = predict(train_headlines, train_trend, test_headlines, test_trend, stop_words=new_stopwords, **params)
-    best_params = params
+    # params = dict(
+    #     {'alpha': 0.000630957344480193, 'max_df': 0.16509636244473133, 'max_iter': 5, 'min_df': 0.01,
+    #      'ngram_range': (1, 2), 'random_state': 43, 'sgd_loss': 'hinge', 'sgd_penalty': 'l1', 'tfidf_norm': 'l1',
+    #      'use_idf': True})
+    # accuracy, df = predict(train_headlines, train_trend, test_headlines, test_trend, stop_words=new_stopwords, **params)
+    # best_params = params
+
+    # params = dict(
+    #     {'alpha': 0.00036840314986403866, 'max_df': 0.049999999999999996, 'max_iter': 5, 'min_df': 0.012599210498948734,
+    #      'ngram_range': (1, 2), 'random_state': 43, 'sgd_loss': 'log', 'sgd_penalty': 'l1', 'tfidf_norm': 'l2',
+    #      'use_idf': True}
+    # )
+    # accuracy, df = predict(train_headlines, train_trend, test_headlines, test_trend, stop_words=new_stopwords, **params)
+    # best_params = params
+
+    # params = dict(
+    #     {'alpha': 0.0005139042664010976, 'max_df': 0.20000000000000004, 'max_iter': 5, 'min_df': 0.01,
+    #      'ngram_range': (1, 2), 'random_state': 43, 'sgd_loss': 'log', 'sgd_penalty': 'l1', 'tfidf_norm': 'l1',
+    #      'use_idf': True}
+    # )
+    # accuracy, df = predict(train_headlines, train_trend, test_headlines, test_trend, stop_words=new_stopwords, **params)
+    # best_params = params
+
     print('Accuracy:', accuracy)
     top_n = 7
     most_negative = df.sort_values(1).iloc[:top_n]
@@ -133,15 +170,15 @@ def run():
 
 def grid_search(train_headlines, train_trend, test_headlines, test_trend, stop_words):
     params = dict(
-        min_df=np.geomspace(0.01, 0.04, 4),
-        max_df=np.geomspace(0.05, 0.2, 4),
+        min_df=np.geomspace(0.01, 0.020, 6),
+        max_df=np.geomspace(0.05, 0.2, 6),
         stop_words=[stop_words, ],
         use_idf=[True],
         tfidf_norm=['l1', 'l2'],
         ngram_range=[(1, 2), (1, 1)],
-        sgd_loss=['log', 'hinge'],
-        sgd_penalty=['l1', 'l2'],
-        alpha=np.geomspace(1e-5, 1e-3, 4),
+        sgd_loss=['hinge'],
+        sgd_penalty=['l1'],
+        alpha=np.geomspace(5e-5, 1e-3, 10),
         # alpha=[1.1288378916846883e-05],
         max_iter=[5],
         return_df=[False],
@@ -151,7 +188,7 @@ def grid_search(train_headlines, train_trend, test_headlines, test_trend, stop_w
     max_accuracy = None
     max_df = None
     max_params = None
-    models = Parallel(n_jobs=8)(
+    models = Parallel(n_jobs=12)(
         delayed(predict)(train_headlines, train_trend, test_headlines, test_trend, **params) for params in paramGrid)
 
     for params, accuracy in zip(paramGrid, models, ):
@@ -160,7 +197,7 @@ def grid_search(train_headlines, train_trend, test_headlines, test_trend, stop_w
             max_params = params
     max_params['return_df'] = True
     new_max_accuracy, max_df = predict(train_headlines, train_trend, test_headlines, test_trend, **max_params)
-    assert new_max_accuracy == max_accuracy
+    assert math.isclose(new_max_accuracy, max_accuracy)
     del max_params['return_df']
     del max_params['stop_words']
     return max_accuracy, max_df, max_params
@@ -170,5 +207,6 @@ if __name__ == '__main__':
     import time
 
     t0 = time.time()
-    run()
+    # run()
+    run('bitcoin')
     print(time.time() - t0)
