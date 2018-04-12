@@ -130,7 +130,6 @@ class SeleniumScraper:
             time.sleep(additional_wait_time)
             driver.switch_to.parent_frame()
 
-
     def set_up_query(self, search_term, start_date, end_date):
         """
 
@@ -189,7 +188,6 @@ class SeleniumScraper:
             if cur_start_date <= self.start_date:
                 break
 
-
         # Parallel(n_jobs=1)(delayed(self.query_lexis_nexis)(*params) for params in query_parameters)
         for *params, search_range in query_parameters:
             yield self.query_lexis_nexis(*params), search_range
@@ -238,11 +236,16 @@ class SeleniumScraper:
         assert len(article_urls) == len(titles)
         return [(t, d, c, u) for t, d, c, u in zip(titles, date_strings, contents, article_urls)]
 
+    @staticmethod
+    def filter_text(text):
+        text = text.replace('"', "").replace('\t', ' ').replace(',', '').replace('.', '').lower()
+        text = SeleniumScraper.NUMBER_RE.sub('', text).strip()
+        return text
+
     def raw_results_to_df(self, results):
         results_table = []
         for title, date_str, content, url in results:
-            title = title.replace('"', "").replace('\t', ' ').replace(',', '').replace('.', '').lower()
-            title = SeleniumScraper.NUMBER_RE.sub('', title).strip()
+            title = SeleniumScraper.filter_text(title)
             num_words = len(re.findall('\w+', title))
             if self.min_words is not None and num_words < self.min_words:
                 continue
@@ -420,106 +423,112 @@ where not exists (select 1 from article where t1.query = query and t1.title = ti
                                 (row['query'], row['title'], row['date'], row['url'], html_content))
 
     @staticmethod
-    def write_html(self, bhtml, name='tmp'):
+    def write_html(bhtml, name='tmp'):
         with open(f'{name}.html', 'wb') as f:
             f.write(bhtml)
 
-    def parse_article_html(results_df=pd.DataFrame()):
-        df = results_df[['query', 'title', 'date']]
+    @staticmethod
+    def parse_article_html(query=None):
         with sqlite3.connect('articles.db') as conn:
             conn.row_factory = sqlite3.Row
-            with SeleniumScraper.tmp_table(df, conn=conn) as tmp_name:
-                #             articles_df = pd.read_sql(sql=f"""select * from article as t1
-                # where exists(select 1 from `{tmp_name}` as t2
-                # where t1.query = t2.query and t1.title = t2.title and t1.date = t2.date)""", con=conn)
-                cur = conn.cursor()
-                cur.execute(f"""select * from article as t1 
-                where exists(select 1 from `{tmp_name}` as t2
-                where t1.query = t2.query and t1.title = t2.title and t1.date = t2.date)
-                limit 100""")
-                b_add_header = True
-                while True:
-                    results = cur.fetchmany(11)
-                    if not results:
-                        break
-                    date_article_list = []
-                    for result in results:
-                        # tree = html.fromstring(result['html'])
-                        # content_elems = tree.xpath('//span[@class="verdana"]')
-                        # assert len(content_elems) == 1
-                        # print([url_re.sub(b' ', html.tostring(x, method='text', encoding='utf8')) for x in content_elems[0].xpath('./p')])
-                        # print(BeautifulSoup(content_elems[0]))
-                        # soup = BeautifulSoup(result['html'])
-                        old_html = result['html']
-                        # write_html(old_html, 'tmp')
-                        tree = html.fromstring(result['html'])
-                        for bad in tree.xpath('//span[@id="crosslinktitlebar"]/../*'):
-                            bad.getparent().remove(bad)
-                        content_elems = tree.xpath('//span[@class="verdana"]')
-                        assert len(content_elems) == 1
-                        for bad in content_elems[0].xpath('.//table'):
-                            bad.getparent().remove(bad)
-                        # write_html(html.tostring(tree), 'tmp2')
-                        html_str = html.tostring(content_elems[0])
-                        article_text = plaintext(html_str.decode('utf8'), keep={}, linebreaks=1)
-                        text_list = []
-                        for line_index, line in enumerate(article_text.split('\n')):
-                            if line_index == 0:  # title of the article
-                                continue
-                            line = line.strip()
-                            if SeleniumScraper.DATE_RE.fullmatch(line):
-                                continue
-                            if SeleniumScraper.ARTICLE_INFO_LINE_RE.match(line):
-                                continue
-                            line = SeleniumScraper.DATE_RE.sub(' ', line)
-                            line = SeleniumScraper.URL_RE.sub(' ', line)
-                            line = re.sub(r'\[[A-Za-z=\- 0-9]+\]', ' ', line)
-                            line = line.replace('\t', ' ')
-                            line = line.strip()
-                            if line == '':
-                                continue
-                            if 'ibd-display-video' in line:
-                                SeleniumScraper.write_html(html_str)
-                            text_list.append(line)
-                        date_article_list.append((result['date'], ' '.join(text_list)))
-                        # print(html.tostring(tree.xpath('//span[@class="verdana"]')[0], method='text', encoding='utf8').decode('utf8'))
-                    df = pd.DataFrame(data=date_article_list, columns=['date', 'article'])
-                    if b_add_header:
-                        df.to_csv('articles_per_day.tsv', sep='\t', encoding='utf8', index=False)
-                        b_add_header = False
-                    else:
-                        df.to_csv('articles_per_day.tsv', sep='\t', mode='a', encoding='utf8', header=False,
-                                  index=False)
+            #             articles_df = pd.read_sql(sql=f"""select * from article as t1
+            # where exists(select 1 from `{tmp_name}` as t2
+            # where t1.query = t2.query and t1.title = t2.title and t1.date = t2.date)""", con=conn)
+            cur = conn.cursor()
+            update_cur = conn.cursor()
+            cur.execute(f"""select query, title, date, html from article as t1 
+    where {f'query = "{query}" and' if query is not None else ''} html is not null""")
+            cur_page = 0
+            batch_size = 100
+            while True:
+                print('done up to', cur_page)
+                results = cur.fetchmany(100)
+                cur_page += batch_size
+                if not results:
+                    break
+                full_text_update_parameters = []
+                for result in results:
+                    # tree = html.fromstring(result['html'])
+                    # content_elems = tree.xpath('//span[@class="verdana"]')
+                    # assert len(content_elems) == 1
+                    # print([url_re.sub(b' ', html.tostring(x, method='text', encoding='utf8')) for x in content_elems[0].xpath('./p')])
+                    # print(BeautifulSoup(content_elems[0]))
+                    # soup = BeautifulSoup(result['html'])
+                    # write_html(old_html, 'tmp')
+                    tree = html.fromstring(result['html'])
+                    for bad in tree.xpath('//span[@id="crosslinktitlebar"]/../*'):
+                        bad.getparent().remove(bad)
+                    content_elems = tree.xpath('//span[@class="verdana"]')
+                    assert len(content_elems) == 1
+                    for bad in content_elems[0].xpath('.//table'):
+                        bad.getparent().remove(bad)
+                    # write_html(html.tostring(tree), 'tmp2')
+                    html_str = html.tostring(content_elems[0])
+                    article_text = plaintext(html_str.decode('utf8'), keep={}, linebreaks=1)
+                    text_list = []
+                    for line_index, line in enumerate(article_text.split('\n')):
+                        if line_index == 0:  # title of the article
+                            continue
+                        line = line.strip()
+                        if SeleniumScraper.DATE_RE.fullmatch(line):
+                            continue
+                        if SeleniumScraper.ARTICLE_INFO_LINE_RE.match(line):
+                            continue
+                        line = SeleniumScraper.DATE_RE.sub(' ', line)
+                        line = SeleniumScraper.URL_RE.sub(' ', line)
+                        line = re.sub(r'\[[A-Za-z=\- 0-9]+\]', ' ', line)
+                        line = line.replace('\t', ' ')
+                        line = line.strip()
+                        if line == '':
+                            continue
+                        if 'ibd-display-video' in line:
+                            SeleniumScraper.write_html(html_str)
+                        text_list.append(line)
+                    full_text_update_parameters.append(
+                        (SeleniumScraper.filter_text(' '.join(text_list)), result['query'], result['title'], result['date']))
+                    # print(html.tostring(tree.xpath('//span[@class="verdana"]')[0], method='text', encoding='utf8').decode('utf8'))
+                # df = pd.DataFrame(data=full_text_update_commands, columns=['date', 'article'])
+                # if b_add_header:
+                #     df.to_csv('articles_per_day.tsv', sep='\t', encoding='utf8', index=False)
+                #     b_add_header = False
+                # else:
+                #     df.to_csv('articles_per_day.tsv', sep='\t', mode='a', encoding='utf8', header=False,
+                #               index=False)
+                update_cur.executemany(
+                    """update article set full_text = (?)
+                    where query = (?)
+                    and title = (?)
+                    and date = (?)""", full_text_update_parameters)
 
 
 if __name__ == '__main__':
-    # query = 'bitcoin'
+    query = 'bitcoin'
     # download_results_html(query, start_date=date(2017, month=1, day=1),
     #                       date_offset=dateutil.relativedelta.relativedelta(years=2),
     #                       last_page=1)
     # results = parse_results(query, 0.6, page_limit=20, min_words=5)
     # add_results_to_db(query, results)
 
-    # parse_article_html(query, results)
+    SeleniumScraper.parse_article_html()
 
-    for i in range(100):
-        try:
-            scraper = SeleniumScraper(search_term='bitcoin', start_date=date(2016, month=1, day=1),
-                                      date_offset=dateutil.relativedelta.relativedelta(months=1),
-                                      last_page=50, scrape_articles=False, end_date=date(2018, 4, 6))
-            scraper.scrape_results_to_db(verbose=True)
-
-            scraper = SeleniumScraper(search_term='microsoft', start_date=date(2000, month=1, day=1),
-                                      date_offset=dateutil.relativedelta.relativedelta(months=6),
-                                      last_page=50, scrape_articles=False, end_date=date(2018, 4, 6))
-            scraper.scrape_results_to_db(verbose=True)
-
-            scraper = SeleniumScraper(search_term='trump', start_date=date(2016, month=1, day=1),
-                                      date_offset=dateutil.relativedelta.relativedelta(months=1),
-                                      last_page=50, scrape_articles=False, end_date=date(2018, 4, 6))
-            scraper.scrape_results_to_db(verbose=True)
-        except:
-            if i >= 5:
-                raise
-        if i >= 5:
-            break
+    # for i in range(100):
+    #     try:
+    #         scraper = SeleniumScraper(search_term='bitcoin', start_date=date(2016, month=1, day=1),
+    #                                   date_offset=dateutil.relativedelta.relativedelta(months=1),
+    #                                   last_page=50, scrape_articles=True, end_date=date(2018, 4, 6))
+    #         scraper.scrape_results_to_db(verbose=True)
+    #
+    #         scraper = SeleniumScraper(search_term='microsoft', start_date=date(2000, month=1, day=1),
+    #                                   date_offset=dateutil.relativedelta.relativedelta(months=6),
+    #                                   last_page=50, scrape_articles=True, end_date=date(2018, 4, 6))
+    #         scraper.scrape_results_to_db(verbose=True)
+    #
+    #         scraper = SeleniumScraper(search_term='trump', start_date=date(2016, month=1, day=1),
+    #                                   date_offset=dateutil.relativedelta.relativedelta(months=1),
+    #                                   last_page=50, scrape_articles=True, end_date=date(2018, 4, 6))
+    #         scraper.scrape_results_to_db(verbose=True)
+    #     except:
+    #         if i >= 5:
+    #             raise
+    #     if i >= 5:
+    #         break
